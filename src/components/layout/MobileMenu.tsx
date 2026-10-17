@@ -65,13 +65,13 @@ export function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuProps) {
         {/* Drawer Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-100">
           <Link href="/" onClick={onClose} className="flex items-center gap-2.5">
-            <div className="relative w-28 h-9">
+            <div className="relative w-[66px] h-[48px]">
               <Image
                 src={siteConfig.logo.primary}
                 alt={siteConfig.brandName}
                 fill
                 className="object-contain object-left"
-                sizes="120px"
+                sizes="66px"
               />
             </div>
           </Link>

@@ -31,33 +31,33 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "py-2.5 bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-xs"
-            : "py-4 sm:py-5 bg-white/70 backdrop-blur-xs border-b border-slate-100/60"
+            ? "py-2 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs"
+            : "py-2.5 sm:py-3 bg-white/90 backdrop-blur-md border-b border-slate-200/60 shadow-xs"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-12 sm:h-14">
-            {/* Logo */}
+          <div className="flex items-center justify-between min-h-[54px] sm:min-h-[62px] lg:min-h-[66px]">
+            {/* Logo: Sized to achieve visible height of 50-58px on desktop and 42-48px on mobile */}
             <Link
               href="/"
-              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#286497] rounded-md"
+              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#286497] rounded-md shrink-0"
               aria-label="SG Smart Glass Home"
             >
-              <div className="relative w-28 sm:w-36 h-10 transition-transform duration-200 group-hover:scale-[1.02]">
+              <div className="relative w-[66px] sm:w-[74px] lg:w-[80px] h-[48px] sm:h-[54px] lg:h-[58px] transition-transform duration-200 group-hover:scale-[1.02]">
                 <Image
                   src={siteConfig.logo.primary}
                   alt={siteConfig.logo.alt}
                   fill
                   priority
                   className="object-contain object-left"
-                  sizes="(max-width: 640px) 112px, 144px"
+                  sizes="(max-width: 640px) 66px, (max-width: 1024px) 74px, 80px"
                 />
               </div>
             </Link>
 
             {/* Desktop Navigation Links */}
             <nav
-              className="hidden lg:flex items-center gap-1 xl:gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-slate-200/70 shadow-xs"
+              className="hidden lg:flex items-center gap-1 xl:gap-2 px-3 py-1.5 rounded-full bg-white/90 border border-slate-200/80 shadow-xs"
               aria-label="Main Navigation"
             >
               {navItems.map((item) => {

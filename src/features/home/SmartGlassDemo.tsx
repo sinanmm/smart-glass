@@ -10,11 +10,20 @@ import { Sun, Shield, Zap, SlidersHorizontal } from "lucide-react";
 export function SmartGlassDemo() {
   const [sliderPos, setSliderPos] = useState(50);
   const [activeMode, setActiveMode] = useState<"both" | "clear" | "private">("both");
+  const [isDragging, setIsDragging] = useState(false);
 
   const handlePointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    if (e.buttons !== 1 && e.type !== "touchmove") return;
+    if (!isDragging && e.buttons !== 1 && e.type !== "pointerdown") return;
     const rect = e.currentTarget.getBoundingClientRect();
     const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+    const percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
+    setSliderPos(percent);
+    setActiveMode("both");
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = Math.max(0, Math.min(e.touches[0].clientX - rect.left, rect.width));
     const percent = Math.max(0, Math.min(100, (x / rect.width) * 100));
     setSliderPos(percent);
     setActiveMode("both");
@@ -34,7 +43,7 @@ export function SmartGlassDemo() {
           title="One Glass. Two Possibilities."
           description="PDLC (Polymer Dispersed Liquid Crystal) smart film instantly transforms architectural glass from optical clarity to frosted privacy at the touch of a switch."
           align="center"
-          className="mb-14"
+          className="mb-12"
         />
 
         {/* State Explanation Cards & Switcher */}
@@ -94,10 +103,52 @@ export function SmartGlassDemo() {
 
         {/* Large Interactive Comparison Stage */}
         <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden glass-panel p-3 sm:p-5 shadow-2xl border border-slate-200">
+          {/* Controller Bar with CLEAR / PRIVATE Toggle Buttons */}
+          <div className="flex flex-wrap items-center justify-between gap-3 mb-4 px-2 py-1">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#66BEAE] animate-pulse" />
+              <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+                Live State Simulator
+              </span>
+            </div>
+
+            {/* State Mode Switcher */}
+            <div className="inline-flex rounded-xl bg-slate-100 p-1 border border-slate-200 text-xs font-semibold">
+              <button
+                type="button"
+                onClick={() => setPreset("clear")}
+                className={`px-3.5 py-1.5 rounded-lg transition-all ${
+                  sliderPos > 70
+                    ? "bg-white text-[#286497] shadow-xs font-bold"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                CLEAR (ON)
+              </button>
+              <button
+                type="button"
+                onClick={() => setPreset("private")}
+                className={`px-3.5 py-1.5 rounded-lg transition-all ${
+                  sliderPos < 30
+                    ? "bg-white text-[#286497] shadow-xs font-bold"
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                PRIVATE (OFF)
+              </button>
+            </div>
+          </div>
+
           <div
             className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden select-none cursor-ew-resize bg-slate-200 group"
+            onPointerDown={(e) => {
+              setIsDragging(true);
+              handlePointerMove(e);
+            }}
+            onPointerUp={() => setIsDragging(false)}
+            onPointerLeave={() => setIsDragging(false)}
             onPointerMove={handlePointerMove}
-            onPointerDown={handlePointerMove}
+            onTouchMove={handleTouchMove}
             role="slider"
             aria-label="Comparison slider demonstrating clear versus frosted smart glass states"
             aria-valuemin={0}
@@ -115,7 +166,7 @@ export function SmartGlassDemo() {
               />
               <div className="absolute bottom-6 right-6 bg-slate-900/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase shadow-md flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-slate-400" />
-                Private Mode
+                Private Mode (Power OFF)
               </div>
             </div>
 
@@ -134,7 +185,7 @@ export function SmartGlassDemo() {
                 />
                 <div className="absolute bottom-6 left-6 bg-[#286497]/90 backdrop-blur-md text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase shadow-md flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#66BEAE]" />
-                  Clear Mode
+                  Clear View (Power ON)
                 </div>
               </div>
             </div>
@@ -157,7 +208,7 @@ export function SmartGlassDemo() {
               <span>Instantaneous transition in under 1/10th of a second</span>
             </div>
             <div className="text-slate-400">
-              Drag horizontally across the glass to inspect the boundary
+              Drag horizontally across the glass or tap CLEAR / PRIVATE to toggle states
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { Hero } from "@/features/home/Hero";
-import { ClientLogos } from "@/features/home/ClientLogos";
 import { SmartGlassDemo } from "@/features/home/SmartGlassDemo";
+import { ClientLogos } from "@/features/home/ClientLogos";
 import { ProductFeatures } from "@/features/home/ProductFeatures";
 import { WhyChooseUs } from "@/features/home/WhyChooseUs";
 import { ApplicationPreview } from "@/features/home/ApplicationPreview";
@@ -12,8 +12,8 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <ClientLogos />
       <SmartGlassDemo />
+      <ClientLogos />
       <ProductFeatures />
       <WhyChooseUs />
       <ApplicationPreview />

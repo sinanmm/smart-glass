@@ -126,7 +126,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col font-sans text-slate-800 bg-white antialiased">
         <Navbar />
-        <main className="flex-1 pt-18 sm:pt-20">{children}</main>
+        <main className="flex-1 pt-[72px] sm:pt-[82px] lg:pt-[88px]">{children}</main>
         <Footer />
       </body>
     </html>
