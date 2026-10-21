@@ -55,7 +55,7 @@ export function FinalCTA() {
               href={siteConfig.contact.whatsapp.url}
               variant="glass"
               size="lg"
-              className="bg-white/15 text-white hover:bg-white/25 border-white/20"
+              className="bg-white/90 hover:bg-white text-[#286497] hover:text-[#1d4d75] border-white/40 shadow-xs font-semibold"
               icon={<MessageCircle className="w-4 h-4 text-[#25D366]" />}
             >
               Chat on WhatsApp
