@@ -59,8 +59,9 @@ export function WhyChooseUs() {
                 src="/images/about/facility.jpg"
                 alt="SG Smart Glass precision film preparation and testing unit"
                 fill
+                quality={95}
                 className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 500px"
+                sizes="(max-width: 1024px) 100vw, 600px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
 

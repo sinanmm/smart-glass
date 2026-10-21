@@ -86,7 +86,7 @@ export function Hero() {
               href="/contact"
               variant="glass"
               size="lg"
-              className="bg-white/10 hover:bg-white/20 text-white border-white/25 backdrop-blur-md shadow-xs"
+              className="bg-white/90 hover:bg-white text-[#286497] hover:text-[#1d4d75] border-white/40 backdrop-blur-md shadow-xs font-semibold"
             >
               Get a Quote
             </Button>
