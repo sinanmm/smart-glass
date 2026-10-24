@@ -29,6 +29,10 @@ export const siteConfig = {
         display: "+91 87147 99907",
         tel: "+918714799907",
       },
+      {
+        display: "+91 87149 22207",
+        tel: "+918714922207",
+      },
     ],
     uae: {
       display: "+971 56 470 7601",
@@ -60,7 +64,7 @@ export const siteConfig = {
 
   // Experience & Positioning
   experience: {
-    years: "17+",
+    years: "35+",
     attribution: "Technical Glass and Glazing India Pvt. Ltd. / Group Industry Expertise",
     leadTerm: "Smart Glass",
     underlyingTech: "PDLC Smart Film",

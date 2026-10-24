@@ -27,7 +27,7 @@ export function FinalCTA() {
             className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-xs"
           >
             <Sparkles className="w-3.5 h-3.5 text-[#66BEAE]" />
-            Consult With Glazing Specialists
+            Consult With Smart Glass Specialists
           </Badge>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
@@ -36,8 +36,8 @@ export function FinalCTA() {
 
           <p className="mt-5 text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl">
             Tell us about your project and our team will help you plan the right smart glass
-            solution—from electrical conduit layouts and glass coordination to custom film
-            preparation and final handover.
+            solution—from electrical conduit layouts to custom film
+            preparation, all-India installation (smart glass only), and final handover.
           </p>
 
           {/* Action CTAs */}
@@ -72,9 +72,9 @@ export function FinalCTA() {
               <span>Direct: {siteConfig.contact.indiaPrimary.display}</span>
             </a>
             <span className="hidden sm:inline opacity-40">•</span>
-            <span>All-India Coordination & Site Planning</span>
+            <span>All-India Installation (Smart Glass Only)</span>
             <span className="hidden sm:inline opacity-40">•</span>
-            <span>3-Year Warranty Backed</span>
+            <span>Up to 5-Year Warranty</span>
           </div>
         </div>
       </Container>

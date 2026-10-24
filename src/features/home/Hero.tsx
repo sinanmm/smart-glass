@@ -1,102 +1,100 @@
-import Image from "next/image";
-import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react";
-import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
+"use client";
+
+import { useRef, useEffect } from "react";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/content/siteConfig";
 
 export function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {
+        // Autoplay policy fallback
+      });
+    }
+  }, []);
+
   return (
-    <section className="relative overflow-hidden bg-[#0A1826] min-h-[580px] sm:min-h-[640px] lg:min-h-[700px] flex items-center py-16 sm:py-20 lg:py-28">
-      {/* Background Architectural Photograph with Smart Glass Partition */}
-      <div className="absolute inset-0 w-full h-full">
-        <Image
-          src="/images/hero/hero-architectural-bg.jpg"
-          alt="SG Smart Glass architectural installation with switchable privacy partitions"
-          fill
-          priority
-          quality={90}
-          className="object-cover object-[center_right] sm:object-right"
-          sizes="100vw"
-        />
+    <section className="relative overflow-hidden min-h-[560px] sm:min-h-[620px] lg:min-h-[660px] flex items-center bg-[#07131F] text-white">
+      {/* Background Video Layer */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none select-none">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src="/hero1.mp4" type="video/mp4" />
+        </video>
 
-        {/* Graduated Dark Navy Overlay: strongest behind the text on the left, fading toward the centre and right to showcase the smart glass interior */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#07131F]/95 via-[#0A1B2C]/90 sm:via-[#0A1B2C]/80 to-[#0A1B2C]/35 pointer-events-none" />
+        {/* Lighter, softer directional scrim so the video remains bright and clearly visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-transparent pointer-events-none" />
 
-        {/* Subtle top & bottom vignette to frame the architectural space */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#07131F]/50 via-transparent to-[#07131F]/70 pointer-events-none" />
+        {/* Subtle vertical vignette */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-black/40 pointer-events-none" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        {/* Balanced, Left-Aligned Content Group */}
-        <div className="max-w-2xl lg:max-w-3xl flex flex-col items-start text-left animate-in fade-in duration-500">
-          {/* Badge above the headline */}
-          <div className="mb-5">
-            <Badge
-              variant="teal"
-              size="md"
-              className="bg-[#66BEAE]/15 text-[#66BEAE] border-[#66BEAE]/35 backdrop-blur-xs"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-[#66BEAE]" />
-              PDLC Smart Film Technology
-            </Badge>
+      {/* Main Content Container - Compact & Tight Vertical Rhythm */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 sm:py-16 lg:py-20">
+        <div className="max-w-2xl flex flex-col items-start text-left">
+          
+          {/* Badge */}
+          <div className="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 border border-white/20 backdrop-blur-md text-[#66BEAE] text-[11px] font-bold tracking-wider uppercase shadow-md">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#66BEAE] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#66BEAE]"></span>
+            </span>
+            <span>PDLC Smart Film Technology</span>
           </div>
 
-          {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-extrabold text-white tracking-tight leading-[1.12]">
+          {/* Heading - Refined Size & Crisp Visibility Font */}
+          <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
             SMART GLASS.
             <br />
-            <span className="text-[#66BEAE]">SMARTER PRIVACY.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#66BEAE] via-[#86e2d3] to-white drop-shadow-[0_2px_10px_rgba(102,190,174,0.35)]">
+              SMARTER PRIVACY.
+            </span>
           </h1>
 
-          {/* Supporting paragraph below headline */}
-          <p className="mt-5 sm:mt-6 text-base sm:text-lg lg:text-xl text-slate-200 leading-relaxed font-normal">
-            Switch between transparency and privacy at the touch of a button.{" "}
-            <strong className="text-white font-semibold">SG Smart Glass</strong> uses
-            advanced PDLC smart film to bring intelligent privacy to modern spaces.
+          {/* Supporting Copy - Compact Spacing & Clear Font */}
+          <p className="mt-3.5 text-sm sm:text-base text-slate-100/95 leading-relaxed font-normal max-w-xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)]">
+            Switch between crystal clarity and complete privacy at the touch of a button.{" "}
+            <strong className="text-white font-semibold">SG Smart Glass</strong> integrates advanced
+            switchable smart film into modern architectural spaces across India.
           </p>
 
-          {/* Benefits */}
-          <div className="mt-7 flex flex-wrap gap-y-3 gap-x-6 text-xs sm:text-sm font-medium text-slate-200">
-            <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#66BEAE] shrink-0" />
-              3-Year Warranty
-            </span>
-            <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#66BEAE] shrink-0" />
-              99% UV Protection
-            </span>
-            <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#66BEAE] shrink-0" />
-              All-India Glazing Network
-            </span>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
-            <Button
+          {/* Action CTA Buttons */}
+          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-3 w-full sm:w-auto">
+            <Link
               href="/products"
-              variant="teal"
-              size="lg"
-              className="shadow-lg shadow-teal-900/30 hover:shadow-teal-500/20"
-              icon={<ArrowRight className="w-4 h-4" />}
+              className="inline-flex items-center justify-center gap-2 font-bold text-xs sm:text-sm tracking-wide px-6 py-3 rounded-xl bg-[#66BEAE] hover:bg-[#52ad9d] text-slate-950 shadow-lg shadow-teal-900/30 hover:shadow-teal-500/30 active:scale-[0.98] transition-all"
             >
-              Explore Products
-            </Button>
-            <Button
+              <span>Explore Products</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+
+            <Link
               href="/contact"
-              variant="glass"
-              size="lg"
-              className="bg-white/90 hover:bg-white text-[#286497] hover:text-[#1d4d75] border-white/40 backdrop-blur-md shadow-xs font-semibold"
+              className="inline-flex items-center justify-center font-bold text-xs sm:text-sm tracking-wide px-6 py-3 rounded-xl bg-[#286497] hover:bg-[#1f507a] text-white shadow-lg shadow-[#286497]/40 hover:shadow-[#286497]/60 border border-blue-400/30 active:scale-[0.98] transition-all"
             >
               Get a Quote
-            </Button>
+            </Link>
           </div>
 
-          {/* Attribution note */}
-          <p className="mt-8 sm:mt-10 text-[12px] sm:text-[13px] text-slate-300/80 leading-normal border-l-2 border-[#66BEAE] pl-3 py-0.5">
-            Powered by <span className="text-white font-medium">{siteConfig.legalCompanyName}</span>.
-            Custom film preparation, site coordination & electrical testing.
-          </p>
+          {/* Clean Attribution */}
+          <div className="mt-4 sm:mt-5 flex items-center gap-2.5">
+            <span className="w-1.5 h-4 rounded-full bg-[#66BEAE]" />
+            <p className="text-xs text-slate-200/90 drop-shadow-md">
+              Powered by <span className="text-white font-semibold">{siteConfig.legalCompanyName}</span>
+            </p>
+          </div>
+
         </div>
       </div>
     </section>

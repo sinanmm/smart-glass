@@ -8,11 +8,14 @@ export interface Product {
   description: string;
   fullDescription: string;
   image: string;
+  galleryImages?: string[];
   features: string[];
   approvedSpecs: { label: string; value: string }[];
   applications: string[];
   clearViewNote?: string;
   badge?: string;
+  featuresAndAdvantages?: { feature: string; advantage: string }[];
+  diagramImage?: string;
 }
 
 export const smartFilmVariants: Product[] = [
@@ -24,28 +27,28 @@ export const smartFilmVariants: Product[] = [
     categoryLabel: "PDLC Smart Film",
     tagline: "Ultra-High Transparency Smart Film",
     description:
-      "A high-transparency option for spaces where visual clarity is a priority.",
+      "The latest and most advanced smart glass technology available, delivering ultra-clear visibility and premium performance.",
     fullDescription:
       "SG 95% Clear View is specifically selected for spaces requiring superior optical transparency in its active clear state. Ideal for executive boardrooms, luxury residential living spaces, and storefronts where open sightlines and maximum daylight transmission are paramount. Switches instantaneously to a fully private frosted surface at the touch of a switch.",
     image: "/images/products/sg95-clear-view.jpg",
     features: [
-      "High visual clarity in transparent state",
-      "Instantaneous switch between open clarity and total privacy",
-      "Custom prepared and cut to confirmed glass dimensions",
-      "99% UV protection to reduce interior fading",
-      "Up to 20% solar heat reduction",
-      "Compatible with wall switch, remote, or home automation integration",
+      "Ultra-clear optical visibility in transparent state (95% clarity tier)",
+      "Instantaneous switch between open clarity and total privacy in < 100ms",
+      "Custom prepared and precision cut to confirmed glass dimensions",
+      "99% UV protection to reduce interior fading and skin exposure",
+      "Up to 20% solar heat reduction to lower indoor cooling load",
+      "Compatible with wall switch, RF remote, or home automation integration",
     ],
     approvedSpecs: [
       { label: "Technology", value: "Polymer Dispersed Liquid Crystal (PDLC)" },
       { label: "Operation State", value: "Power ON: Transparent | Power OFF: Frosted/Private" },
       { label: "UV Blocking", value: "99% UV Protection" },
       { label: "Heat Reduction", value: "Up to 20% Solar Heat Reduction" },
-      { label: "Warranty", value: "3-Year Limited Warranty" },
+      { label: "Warranty", value: "Up to 5-Year Warranty (3-Yr Replacement + Extended)" },
       { label: "Preparation", value: "Custom pre-cut to confirmed project dimensions" },
     ],
     applications: [
-      "Executive Boardrooms & Conference Rooms",
+      "Executive Boardrooms & Leadership Suites",
       "Luxury Villa Living & Dining Partitions",
       "Architectural Showrooms & Atriums",
     ],
@@ -61,24 +64,24 @@ export const smartFilmVariants: Product[] = [
     categoryLabel: "PDLC Smart Film",
     tagline: "Architectural Grade High Clarity",
     description:
-      "A high-transparency option for a wide range of architectural privacy applications.",
+      "High-clarity smart glass solution with elegant aesthetics and excellent functionality across commercial and residential projects.",
     fullDescription:
-      "SG 91% Clear View is the versatile architectural standard for commercial offices, hotels, and residential projects. It balances visual clarity in the powered-on state with diffusion in the frosted privacy mode.",
+      "SG 91% Clear View is the versatile architectural standard for commercial offices, hotels, and residential projects. It balances high visual clarity in the powered-on state with full privacy diffusion in the frosted mode.",
     image: "/images/products/sg91-clear-view.jpg",
     features: [
-      "Balanced architectural clarity and privacy diffusion",
-      "Switchable transparency and privacy on demand",
-      "Pre-cut and customized to millimeter precision",
+      "Balanced architectural clarity and privacy diffusion (91% clarity tier)",
+      "Switchable transparency and privacy on demand in under 0.1s",
+      "Pre-cut and customized to millimeter precision at our facility",
       "99% UV radiation blocking",
-      "20% thermal heat reduction",
-      "3-Year manufacturer warranty",
+      "Up to 20% thermal heat reduction",
+      "Up to 5-Year warranty backing",
     ],
     approvedSpecs: [
       { label: "Technology", value: "PDLC Smart Film" },
       { label: "Operation Mode", value: "Power ON: Clear | Power OFF: Private" },
       { label: "UV Protection", value: "99% Protection" },
-      { label: "Heat Reduction", value: "20% Reduction" },
-      { label: "Warranty", value: "3-Year Limited Warranty" },
+      { label: "Heat Reduction", value: "Up to 20% Solar Reduction" },
+      { label: "Warranty", value: "Up to 5-Year Warranty (3-Yr Replacement + Extended)" },
       { label: "Control Options", value: "Wall switch, RF remote, Home automation" },
     ],
     applications: [
@@ -96,31 +99,32 @@ export const smartFilmVariants: Product[] = [
     name: "SG 89% Clear View",
     category: "smart-film",
     categoryLabel: "PDLC Smart Film",
-    tagline: "Dependable Architectural Privacy",
+    tagline: "Dependable Cost-Effective Architectural Privacy",
     description:
-      "An alternative clarity option for projects with different visual requirements.",
+      "A reliable and cost-effective smart glass option suitable for multiple interior partition applications.",
     fullDescription:
-      "SG 89% Clear View provides dependable privacy performance for interior partitions where high-contrast frosted privacy is required while maintaining natural ambient light distribution.",
+      "SG 89% Clear View provides dependable privacy performance for interior partitions where high-contrast frosted privacy is required while maintaining natural ambient light distribution throughout the space.",
     image: "/images/products/sg89-clear-view.jpg",
     features: [
-      "Consistent light diffusion and frosted privacy",
-      "Switchable on/off operation",
+      "Cost-effective switchable privacy solution (89% clarity tier)",
+      "Consistent light diffusion and rapid frosted privacy",
+      "Switchable on/off operation (< 100 milliseconds)",
       "99% UV filtration",
-      "Custom prepared at SG production facility",
-      "Ideal for high-privacy interior glazing",
+      "Custom prepared at SG production facility in India",
+      "Ideal for interior office partitions and clinic cubicles",
     ],
     approvedSpecs: [
       { label: "Technology", value: "PDLC Smart Film" },
       { label: "Switching Function", value: "Transparent (Active) / Frosted (Idle)" },
       { label: "UV Resistance", value: "99% UV Block" },
       { label: "Thermal Control", value: "Up to 20% Solar Heat Reduction" },
-      { label: "Warranty", value: "3-Year Limited Warranty" },
-      { label: "Installation", value: "Coordinated with glass installation team" },
+      { label: "Warranty", value: "Up to 5-Year Warranty (3-Yr Replacement + Extended)" },
+      { label: "Installation", value: "All-India installation (smart glass only)" },
     ],
     applications: [
       "Internal Office Partitions & Staff Rooms",
-      "Healthcare Treatment & ICU Cubicles",
-      "Residential Bathroom Dividers",
+      "Healthcare Treatment & Consultation Cubicles",
+      "Residential Bathroom & Ensuite Dividers",
     ],
   },
   {
@@ -131,7 +135,7 @@ export const smartFilmVariants: Product[] = [
     categoryLabel: "PDLC Smart Film",
     tagline: "Dark-Tinted Architectural Privacy",
     description:
-      "A tinted option for darker interiors and design schemes requiring a deeper appearance.",
+      "A tinted option for darker interiors and design schemes requiring a deeper smoke appearance.",
     fullDescription:
       "SG Black Tinted Smart Film introduces a modern dark charcoal aesthetic suited for darker interior colour palettes, private cinema rooms, modern hospitality lounges, and executive suites requiring deeper tone and controlled glare.",
     image: "/images/products/sg-black-tinted.jpg",
@@ -147,8 +151,8 @@ export const smartFilmVariants: Product[] = [
       { label: "Appearance", value: "Dark Charcoal / Smoke Tinted" },
       { label: "Switching Mode", value: "Tinted Clear (Active) / Deep Frosted (Idle)" },
       { label: "UV Protection", value: "99% UV Block" },
-      { label: "Warranty", value: "3-Year Limited Warranty" },
-      { label: "Controls", value: "Switch / Remote / Automation" },
+      { label: "Warranty", value: "Up to 5-Year Warranty (3-Yr Replacement + Extended)" },
+      { label: "Controls", value: "Wall switch, RF Remote, Smart Automation" },
     ],
     applications: [
       "Private Home Theatres & Entertainment Lounges",
@@ -165,64 +169,135 @@ export const glassProfiles: Product[] = [
     slug: "twin-pro",
     name: "Twin Pro",
     category: "glass-profiles",
-    categoryLabel: "Glass Profile System",
-    tagline: "Architectural Double-Glazed Profile System",
+    categoryLabel: "Architectural Profile System",
+    tagline: "Solid Aluminium Architectural Profile System for Dry Glazing & Smart Glass",
     description:
-      "Engineered double-glazed glass profile system designed for superior acoustic performance and clean architectural integration.",
+      "Unique profile design with dry glazing mechanism, 50mm deeper inner cavity, and contoured EPDM gaskets for 8mm, 10mm & 12mm glass partitions.",
     fullDescription:
-      "Twin Pro is an architectural glass profile system engineered for modern interior partition projects requiring enhanced acoustic isolation and structured glazing. Designed to house smart glass panels with concealed wire management routes, ensuring seamless electrical integration.",
+      "Twin Pro is a premier solid aluminium architectural profile system engineered by Technical Glass Leading Technologies for high-performance glass partitions and smart glass installations. Utilizing a unique twinpro mechanism with dry glazing (no glue or silicon required), Twin Pro features a 50mm deeper inner cavity (both height and width) permitting higher glass tolerances, effortless assembly, and acoustic soundproofing via contoured EPDM gaskets.",
     image: "/images/products/twin-pro.jpg",
+    galleryImages: [
+      "/images/products/twin-pro-installation.jpg",
+      "/images/products/twin-pro-diagram.png",
+      "/images/products/twin-pro-disassembled.jpg",
+      "/images/products/profiles-side-by-side.jpg",
+    ],
+    diagramImage: "/images/products/twin-pro-diagram.png",
     features: [
-      "Engineered for double-glazed architectural glass applications",
-      "Enhanced acoustic privacy for boardrooms and executive cabins",
-      "Dedicated concealed wiring conduits for smart film connections",
-      "Precision aluminum profile with durable anodized finish",
-      "Seamless coordination with SG Smart Glass film installation",
+      "Unique Profile Design: 50mm deeper inner cavity (both height & width) for higher glass tolerances",
+      "Ideal for 8mm, 10mm & 12mm glass thickness",
+      "Solid Aluminium Profile with steadfast holding power to structure and glass",
+      "Dry Glazing: Easy installation & demounting as no glue or silicon required",
+      "Unique Twinpro Mechanism: No shifting or falling out of position, maintenance free",
+      "Contoured EPDM Gaskets for maximum soundproofing and acoustic performance",
+      "Safety & Security / Theft Proof: Uniform grip along all 8 edges with exterior gasket removal prevented under pressure",
+      "Minimum Components: 2 Profiles & Gaskets for reduced inventory and rapid assembly",
+    ],
+    featuresAndAdvantages: [
+      {
+        feature: "Unique Profile Design",
+        advantage: "Simple & faster fabrication and glass Installation. Ideal for 8, 10 & 12mm glass thickness, 50mm deeper Inner cavity (both Height & Width) permits higher tolerances on glass dimension.",
+      },
+      {
+        feature: "Solid Aluminium Profile",
+        advantage: "Steadfast holding power to structure and for glass.",
+      },
+      {
+        feature: "Unique Twinpro Mechanism",
+        advantage: "No shifting or falling out of position, maintenance free.",
+      },
+      {
+        feature: "Dry Glazing",
+        advantage: "Easy installation & demounting as no glue or silicon required, easier glass replacement.",
+      },
+      {
+        feature: "Minimum Components (2 Profiles & Gaskets)",
+        advantage: "Reduced inventory, multiple applications.",
+      },
+      {
+        feature: "Economical",
+        advantage: "Cost effective time & labour saving by easy installation & faster applied cladding.",
+      },
+      {
+        feature: "Aesthetics",
+        advantage: "Slim & strong design, low visual impact, space saving.",
+      },
+      {
+        feature: "Acoustics",
+        advantage: "Profile design features and contoured EPDM gaskets helps achieve highest level of sound proofing.",
+      },
+      {
+        feature: "Safety & Security / Theft Proof",
+        advantage: "Deep cavity in profile and uniform grip on all along the 8 edges of glass adds strength to glazing and reduces horizontal movements. Exterior removal of gasket/glass made impossible due to contoured EPDM gasket held under pressure. Better shock absorption.",
+      },
+      {
+        feature: "Color",
+        advantage: "Available in anodized finishes, mill finish, any RAL colours.",
+      },
+      {
+        feature: "Length",
+        advantage: "Standard size 3600mm, 5800mm (custom sizes available).",
+      },
     ],
     approvedSpecs: [
-      { label: "System Type", value: "Double-Glazed Profile System" },
-      { label: "Profile Material", value: "Architectural Grade Extruded Aluminum" },
-      { label: "Application Scope", value: "Interior Demountable & Fixed Partitions" },
-      { label: "Smart Film Integration", value: "Integrated concealed wire management" },
-      { label: "Compatibility", value: "Engineered for SG Smart Glass systems" },
+      { label: "Glass Compatibility", value: "8mm, 10mm & 12mm Glass Thickness" },
+      { label: "Inner Cavity", value: "50mm Deeper Inner Cavity (Height & Width)" },
+      { label: "Glazing Method", value: "Dry Glazing (No glue or silicone required)" },
+      { label: "Material & Build", value: "Solid Architectural Aluminium Profile" },
+      { label: "Acoustics", value: "Contoured EPDM Gaskets for maximum soundproofing" },
+      { label: "System Components", value: "Minimum 2 Profiles & Contoured Gaskets" },
+      { label: "Standard Lengths", value: "3600mm, 5800mm (custom sizes available)" },
+      { label: "Finish Options", value: "Anodized finishes, Mill finish, Any RAL colours" },
+      { label: "Security & Safety", value: "Theft proof, anti-shifting, deep uniform 8-edge grip" },
     ],
     applications: [
-      "High-Acoustic Boardrooms",
-      "Legal & Financial Executive Suites",
-      "Corporate Headquarters Partitions",
+      "Glass Partitions & Interior Office Partitions",
+      "Rail for Fixed Glass Enabling Easy Assembly & Replacement",
+      "Shop Fronts with Maximum Visibility and Security",
+      "Fix Windows & Partitions that Need Relocation",
+      "Pergolas, Sky Lights & Shower Cubicles",
+      "Photo and Mirror Frames & Elegant Signages",
     ],
+    badge: "Solid Aluminium Dry Glazing",
   },
   {
     id: "slim-pro",
     slug: "slim-pro",
     name: "Slim Pro",
     category: "glass-profiles",
-    categoryLabel: "Glass Profile System",
-    tagline: "Minimalist Ultra-Slim Profile System",
+    categoryLabel: "Slim Profile System",
+    tagline: "Minimalist Single-Piece Ultra-Slim Channel Profile",
     description:
-      "Minimalist ultra-slim single-glazed glass profile system delivering clean visual lines and modern elegance.",
+      "Minimalist ultra-slim channel profile system delivering clean visual lines and maximum exposed glass area for single-glazed smart partitions.",
     fullDescription:
-      "Slim Pro offers an ultra-minimalist perimeter profile for single-glazed smart glass installations. With slim sightlines, it allows the switchable glass to remain the pure visual focal point of the space while maintaining robust structural support and concealed power routing.",
+      "Slim Pro offers an ultra-minimalist perimeter profile for smart glass installations. With slim sightlines, it allows the switchable glass to remain the pure visual focal point of the space while maintaining robust structural support, integrated rubber gasket cushioning, and concealed cable routing.",
     image: "/images/products/slim-pro.jpg",
+    galleryImages: [
+      "/images/products/profiles-side-by-side.jpg",
+      "/images/products/profiles-cross-section.jpg",
+    ],
     features: [
       "Ultra-slim minimalist perimeter frame profile",
       "Maximizes transparent glass area and architectural elegance",
+      "Integrated EPDM gasket retention for vibration damping and edge protection",
       "Precision cable routing for PDLC electrical feed",
-      "Durable architectural powder-coated or anodized finish",
-      "Fast, precise installation coordination",
+      "Durable architectural anodized matte black finish",
+      "Fast, precise installation for single-pane smart glass partitions",
     ],
     approvedSpecs: [
-      { label: "System Type", value: "Single-Glazed Minimalist Profile System" },
+      { label: "System Type", value: "Single-Piece Minimalist Channel Profile" },
       { label: "Design Sightline", value: "Ultra-Slim Frame Profile" },
       { label: "Material", value: "High-Strength Extruded Aluminum" },
       { label: "Electrical Integration", value: "Concealed perimeter cable pathways" },
-      { label: "Compatibility", value: "SG Smart Glass film & glass configurations" },
+      { label: "Glass Compatibility", value: "10mm – 12mm Smart Glass Panels" },
+      { label: "Finish Options", value: "Architectural Matte Black / Anodized" },
     ],
     applications: [
       "Contemporary Residential Living & Ensuite Dividers",
       "Modern Open-Plan Commercial Meeting Cabins",
       "Boutique Retail & Hospitality Suites",
     ],
+    badge: "Ultra-Slim Sightline",
   },
 ];
 

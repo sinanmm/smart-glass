@@ -30,10 +30,10 @@ export function Footer() {
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900 text-sm">
-                  17+ Years Industry Heritage
+                  35+ Years Industry Heritage
                 </h4>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  Powered by Technical Glass and Glazing India Pvt. Ltd.
+                  Over 35 years international expertise in glass technology
                 </p>
               </div>
             </div>
@@ -44,10 +44,10 @@ export function Footer() {
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900 text-sm">
-                  3-Year Limited Warranty
+                  Up to 5-Year Warranty
                 </h4>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  High-grade PDLC film custom-prepared to confirmed dimensions
+                  3 years replacement warranty plus 2 years extended warranty
                 </p>
               </div>
             </div>
@@ -61,7 +61,7 @@ export function Footer() {
                   All-India Installation Capability
                 </h4>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  Coordinated glazing, site planning & after-sales support
+                  Smart glass installation, site planning & dedicated after-sales support
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export function Footer() {
                   {siteConfig.legalCompanyName}
                 </span>
                 . We provide custom PDLC smart film preparation, site coordination,
-                glazing integration, and after-sales support across India and the UAE.
+                all-India installation (smart glass only), and after-sales support across India and the UAE.
               </p>
 
               {/* Social Media Links */}
@@ -236,16 +236,15 @@ export function Footer() {
                   </a>
                 </div>
 
-                <div className="text-[11px] text-slate-500 pl-6 space-y-0.5">
-                  <div>
-                    Alt:{" "}
-                    <a
-                      href={`tel:${siteConfig.contact.additionalIndia[0].tel}`}
-                      className="hover:text-[#286497]"
-                    >
-                      {siteConfig.contact.additionalIndia[0].display}
-                    </a>
-                  </div>
+                <div className="text-[11px] text-slate-500 pl-6 space-y-1">
+                  {siteConfig.contact.additionalIndia.map((item, idx) => (
+                    <div key={idx}>
+                      Alt:{" "}
+                      <a href={`tel:${item.tel}`} className="hover:text-[#286497]">
+                        {item.display}
+                      </a>
+                    </div>
+                  ))}
                   <div>
                     UAE:{" "}
                     <a

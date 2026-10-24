@@ -245,6 +245,74 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               </table>
             </div>
 
+            {/* If product has Features & Advantages Table from Datasheet (Twin Pro) */}
+            {product.featuresAndAdvantages && (
+              <div className="mt-12">
+                <div className="flex items-center gap-3 mb-6">
+                  <FileText className="w-5 h-5 text-[#286497]" />
+                  <h3 className="text-lg sm:text-xl font-bold text-slate-900">
+                    Engineering Features & Advantages (Technical Data)
+                  </h3>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  {/* Left: Architectural Assembly Cross Section Diagram */}
+                  {product.diagramImage && (
+                    <div className="lg:col-span-4 rounded-2xl overflow-hidden bg-white border border-slate-200 p-4 shadow-xs flex flex-col items-center">
+                      <span className="text-[11px] font-bold text-[#286497] uppercase tracking-wider mb-2">
+                        Cross-Section Profile Diagram
+                      </span>
+                      <div className="relative w-full aspect-[9/16] max-h-[460px]">
+                        <Image
+                          src={product.diagramImage}
+                          alt={`${product.name} Profile Assembly Diagram`}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 1024px) 100vw, 300px"
+                        />
+                      </div>
+                      <span className="text-[10px] text-slate-400 mt-2 text-center">
+                        U-PRO Top Track & TWIN PRO Bottom Track with EPDM Gaskets
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Right: Technical Features & Advantages Table */}
+                  <div className={product.diagramImage ? "lg:col-span-8" : "lg:col-span-12"}>
+                    <div className="rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-xs">
+                      <table className="w-full text-left text-xs sm:text-sm">
+                        <thead className="bg-[#286497] text-white">
+                          <tr>
+                            <th className="py-3 px-5 font-bold tracking-wider uppercase text-xs w-2/5">
+                              Features
+                            </th>
+                            <th className="py-3 px-5 font-bold tracking-wider uppercase text-xs w-3/5">
+                              Advantages
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-slate-100">
+                          {product.featuresAndAdvantages.map((row, idx) => (
+                            <tr
+                              key={idx}
+                              className={idx % 2 === 0 ? "bg-white" : "bg-[#F5F9FB]/60"}
+                            >
+                              <td className="py-3.5 px-5 font-bold text-slate-900 align-top">
+                                {row.feature}
+                              </td>
+                              <td className="py-3.5 px-5 text-slate-700 leading-relaxed align-top">
+                                {row.advantage}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {product.clearViewNote && (
               <p className="mt-4 text-xs text-slate-500 italic">
                 * {product.clearViewNote}

@@ -157,7 +157,7 @@ export function PDLCExplanation() {
                 Not sure which smart film option suits your project?
               </h4>
               <p className="text-xs text-slate-500 mt-0.5">
-                Our technical glazing team will guide you on clarity tiers, glass dimensions, and wiring routes.
+                Our smart glass specialists will guide you on clarity tiers, custom dimensions, and wiring routes.
               </p>
             </div>
 

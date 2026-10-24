@@ -157,6 +157,15 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <div className="space-y-4 text-xs">
                 <div>
                   <span className="font-semibold text-slate-400 uppercase tracking-wider block mb-1">
+                    Client / Partner
+                  </span>
+                  <span className="text-slate-900 font-bold text-sm">
+                    {project.clientName}
+                  </span>
+                </div>
+
+                <div>
+                  <span className="font-semibold text-slate-400 uppercase tracking-wider block mb-1">
                     Sector
                   </span>
                   <span className="text-slate-800 font-medium text-sm">
@@ -178,10 +187,40 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     Scope of Work
                   </span>
                   <span className="text-slate-800 font-medium leading-relaxed block">
-                    PDLC film preparation, glass coordination, electrical connection & testing.
+                    PDLC smart glass custom preparation, on-site electrical connection & handover.
                   </span>
                 </div>
               </div>
+
+              {/* Client Testimonial if present */}
+              {project.testimonial && (
+                <div className="p-4 rounded-2xl bg-white border border-[#66BEAE]/40 shadow-xs">
+                  <p className="text-xs text-slate-700 italic font-medium leading-relaxed">
+                    &ldquo;{project.testimonial.quote}&rdquo;
+                  </p>
+                  <div className="mt-3 flex items-center gap-2.5">
+                    {project.testimonial.avatar && (
+                      <div className="relative w-8 h-8 rounded-full overflow-hidden shrink-0 border border-[#66BEAE]">
+                        <Image
+                          src={project.testimonial.avatar}
+                          alt={project.testimonial.author}
+                          fill
+                          className="object-cover"
+                          sizes="32px"
+                        />
+                      </div>
+                    )}
+                    <div>
+                      <h4 className="text-xs font-bold text-slate-900">
+                        {project.testimonial.author}
+                      </h4>
+                      <p className="text-[10px] text-slate-500">
+                        {project.testimonial.role}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               <div className="pt-4 border-t border-slate-200 space-y-3">
                 <Button

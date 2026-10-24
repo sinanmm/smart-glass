@@ -385,8 +385,8 @@ Legal Entity: ${siteConfig.legalCompanyName}`;
             <option value="Retail Showroom / Storefront">
               Retail Showroom / Storefront
             </option>
-            <option value="Special Glazing Project">
-              Special Glazing Project
+            <option value="Special Smart Glass Project">
+              Special Smart Glass Project
             </option>
           </select>
         </div>

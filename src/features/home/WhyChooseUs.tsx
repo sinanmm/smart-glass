@@ -6,50 +6,64 @@ import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/content/siteConfig";
 import {
   Award,
-  Compass,
-  Scissors,
-  Network,
-  HeadphonesIcon,
-  CheckCircle,
+  Globe2,
+  Factory,
+  Sparkles,
+  Zap,
+  Users,
+  ShieldCheck,
+  Cpu,
   ArrowRight,
 } from "lucide-react";
 
 export function WhyChooseUs() {
-  const strengths = [
+  const pillars = [
     {
+      num: "01",
       icon: Award,
-      title: "17+ Years of Industry Expertise",
+      title: "Over 35 Years of Industry Experience",
       description:
-        "Backed by the established architectural heritage of Technical Glass and Glazing India Pvt. Ltd., bringing deep technical glazing knowledge to every project.",
+        "Rooted in decades of glass industry leadership originating from our Dubai parent company (Century Toughened Glass Plant & Broadway Group).",
     },
     {
-      icon: Network,
-      title: "All-India Installation Capability",
+      num: "02",
+      icon: Globe2,
+      title: "International Expertise & Global Standards",
       description:
-        "Comprehensive site coordination and installation presence across Kerala and throughout major metropolitan regions across India.",
+        "Delivering advanced HD Smart Glass solutions across the globe since 2010 with international manufacturing benchmarks.",
     },
     {
-      icon: Compass,
-      title: "Planned Site Coordination",
+      num: "03",
+      icon: Factory,
+      title: "Own In-House Production Facility in India",
       description:
-        "Proactive electrical point planning, conduit layout review, and synchronized scheduling with appointed glass contractors before glazing commences.",
+        "State-of-the-art specialized production and custom film cutting unit located in Nedumbassery, Ernakulam, Kerala.",
     },
     {
-      icon: Scissors,
-      title: "Precision Film Customisation",
+      num: "04",
+      icon: Users,
+      title: "All-India Installation & Dedicated Service",
       description:
-        "Smart film is custom cut, prepared, and terminal-fitted to confirmed millimeter measurements in our specialized facility, ensuring clean edge geometry.",
+        "Dedicated technical and service teams available across all Indian states for specialized smart glass installation and support.",
     },
     {
-      icon: HeadphonesIcon,
-      title: "Dedicated After-Sales Support",
+      num: "05",
+      icon: ShieldCheck,
+      title: "Up to 5 Years Warranty Coverage",
       description:
-        "Ongoing technical guidance, warranty backing, and responsive maintenance support to protect your architectural glazing investment long-term.",
+        "3 Years standard replacement warranty with extended warranty options up to 5 years, providing complete peace of mind.",
+    },
+    {
+      num: "06",
+      icon: Cpu,
+      title: "Customized Smart Glass Engineering",
+      description:
+        "Every film panel is precision pre-cut, busbar-fitted, and tested to exact millimeter architectural tolerances.",
     },
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#F5F9FB] border-b border-slate-200/80">
+    <section className="py-20 lg:py-28 bg-white border-b border-slate-200/80">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Visual Asset and Experience Card */}
@@ -57,26 +71,29 @@ export function WhyChooseUs() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[4/5] bg-slate-100">
               <Image
                 src="/images/about/facility.jpg"
-                alt="SG Smart Glass precision film preparation and testing unit"
+                alt="SG Smart Glass precision film preparation and testing unit in India"
                 fill
                 quality={95}
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 600px"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/20 to-transparent" />
 
               {/* Floating Badge on Image */}
-              <div className="absolute bottom-6 left-6 right-6 p-5 rounded-2xl glass-panel shadow-lg border border-white/40">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-[#286497] text-white flex items-center justify-center font-bold text-lg shrink-0">
-                    17+
+              <div className="absolute bottom-6 left-6 right-6 p-6 rounded-2xl glass-panel shadow-xl border border-white/40">
+                <div className="flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-2xl bg-[#286497] text-white flex items-center justify-center font-extrabold text-xl shrink-0 shadow-md">
+                    35+
                   </div>
                   <div>
                     <span className="text-xs font-bold uppercase tracking-wider text-[#286497] block">
-                      Proven Heritage
+                      Proven Industry Heritage
                     </span>
-                    <p className="text-xs text-slate-700 font-medium">
-                      Decades of specialised glass & glazing execution
+                    <p className="text-xs text-slate-700 font-semibold mt-0.5">
+                      35+ Years in Glass & Architectural Engineering
+                    </p>
+                    <p className="text-[11px] text-slate-500">
+                      Delivering Smart Glass Globally Since 2010
                     </p>
                   </div>
                 </div>
@@ -89,29 +106,35 @@ export function WhyChooseUs() {
             <SectionHeading
               badge="Why Choose SG"
               badgeVariant="blue"
-              title="Operational Discipline. Architectural Precision."
-              description="SG Smart Glass combines advanced PDLC technology with end-to-end site coordination, ensuring every installation functions seamlessly with building systems."
+              title="Global Standards. In-House Indian Manufacturing."
+              description="Backed by over 35 years of industry excellence, SG Smart Glass combines world-class PDLC technology with dedicated all-India installation capability."
               align="left"
               className="mb-8"
             />
 
-            {/* List of 5 Strengths */}
-            <div className="space-y-5">
-              {strengths.map((item) => {
+            {/* List of Pillars - Highlighted text cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {pillars.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div
-                    key={item.title}
-                    className="flex items-start gap-4 p-4 rounded-xl bg-white border border-slate-200/70 shadow-xs hover:border-[#286497]/30 transition-colors"
+                    key={item.num}
+                    className="p-5 rounded-2xl text-card-elevated hover:shadow-lg hover:border-[#286497]/40 transition-luxury flex flex-col justify-between"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-[#eaf2f8] flex items-center justify-center text-[#286497] shrink-0 mt-0.5">
-                      <Icon className="w-5 h-5" />
-                    </div>
                     <div>
-                      <h3 className="text-base font-bold text-slate-900">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-lg font-mono font-extrabold text-[#286497]">
+                          {item.num}
+                        </span>
+                        <div className="w-9 h-9 rounded-xl bg-[#eaf2f8] flex items-center justify-center text-[#286497]">
+                          <Icon className="w-4 h-4" />
+                        </div>
+                      </div>
+
+                      <h3 className="text-sm font-bold text-slate-900 leading-snug">
                         {item.title}
                       </h3>
-                      <p className="mt-1 text-sm text-slate-600 leading-relaxed">
+                      <p className="mt-1.5 text-xs text-slate-600 leading-relaxed">
                         {item.description}
                       </p>
                     </div>
@@ -129,8 +152,8 @@ export function WhyChooseUs() {
               >
                 Learn About Our Heritage
               </Button>
-              <span className="text-xs text-slate-500">
-                Powered by Technical Glass and Glazing India Pvt. Ltd.
+              <span className="text-xs text-slate-500 font-medium">
+                Powered by {siteConfig.legalCompanyName}
               </span>
             </div>
           </div>

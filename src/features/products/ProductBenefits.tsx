@@ -25,9 +25,9 @@ export function ProductBenefits() {
     },
     {
       icon: ShieldCheck,
-      title: "3-Year Limited Warranty",
+      title: "Up to 5-Year Warranty",
       description:
-        "Backed by a comprehensive manufacturer warranty supporting optical film stability and electronics.",
+        "Comprehensive 3 years replacement warranty plus an optional 2 years extended warranty coverage.",
     },
     {
       icon: SunMedium,
@@ -67,7 +67,7 @@ export function ProductBenefits() {
             return (
               <div
                 key={benefit.title}
-                className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/80 hover:border-[#286497]/30 hover:bg-white hover:shadow-lg transition-luxury"
+                className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/90 light-card-highlight text-card-elevated hover:border-[#286497]/40 hover:bg-white hover:shadow-xl transition-luxury"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#eaf2f8] flex items-center justify-center text-[#286497] mb-5">
                   <Icon className="w-6 h-6" />

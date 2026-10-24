@@ -46,7 +46,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               Contact SG Smart Glass
             </h1>
             <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
-              Connect directly with our glazing specialists for project planning,
+              Connect directly with our smart glass specialists for project planning,
               PDLC film customisation, site coordination, and quotation estimates.
             </p>
           </div>
@@ -72,7 +72,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </div>
 
               {/* Head Office Address */}
-              <div className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200 flex items-start gap-4 shadow-xs">
+              <div className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/90 flex items-start gap-4 shadow-sm light-card-highlight text-card-elevated">
                 <div className="w-10 h-10 rounded-xl bg-[#eaf2f8] flex items-center justify-center text-[#286497] shrink-0 mt-0.5">
                   <MapPin className="w-5 h-5" />
                 </div>
@@ -92,7 +92,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </div>
 
               {/* Telephones */}
-              <div className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200 space-y-4 shadow-xs">
+              <div className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/90 space-y-4 shadow-sm light-card-highlight text-card-elevated">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-[#eaf2f8] flex items-center justify-center text-[#286497] shrink-0 mt-0.5">
                     <Phone className="w-5 h-5" />
@@ -116,26 +116,20 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                     </div>
 
                     {/* Additional India */}
-                    <div className="mt-3 pt-3 border-t border-slate-200/60 space-y-1 text-xs text-slate-600">
+                    <div className="mt-3 pt-3 border-t border-slate-200/60 space-y-1.5 text-xs text-slate-600">
                       <span className="text-slate-400 block font-medium">
                         Additional Technical Contacts:
                       </span>
-                      <div>
-                        <a
-                          href={`tel:${siteConfig.contact.additionalIndia[0].tel}`}
-                          className="hover:text-[#286497] font-semibold"
-                        >
-                          {siteConfig.contact.additionalIndia[0].display}
-                        </a>
-                      </div>
-                      <div>
-                        <a
-                          href={`tel:${siteConfig.contact.additionalIndia[1].tel}`}
-                          className="hover:text-[#286497] font-semibold"
-                        >
-                          {siteConfig.contact.additionalIndia[1].display}
-                        </a>
-                      </div>
+                      {siteConfig.contact.additionalIndia.map((item, idx) => (
+                        <div key={idx}>
+                          <a
+                            href={`tel:${item.tel}`}
+                            className="hover:text-[#286497] font-semibold text-slate-800"
+                          >
+                            {item.display}
+                          </a>
+                        </div>
+                      ))}
                     </div>
 
                     {/* UAE */}
@@ -202,7 +196,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                 <p className="leading-relaxed text-slate-500">
                   SG Smart Glass provides custom film preparation and installation coordination.
                   Base-glass selection is handled by the client or their appointed glass supplier.
-                  Site visits for electrical planning are scheduled prior to glazing.
+                  Site visits for electrical planning are scheduled prior to smart glass installation.
                 </p>
               </div>
             </div>

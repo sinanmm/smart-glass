@@ -97,7 +97,7 @@ export const scopeOfWorkClarification = {
     "Professional film application in controlled environment or suitable site conditions",
     "Liaison with appointed glass suppliers and interior contractors",
     "Electrical connection coordination and full switching system testing",
-    "3-Year Warranty and ongoing technical after-sales support",
+    "Up to 5-Year Warranty (3 years replacement + 2 years extended) and ongoing technical after-sales support",
   ],
   clientScope: [
     "Base-glass selection and procurement through appointed glass contractor",
