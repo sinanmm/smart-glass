@@ -30,7 +30,7 @@ export function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/hero1.mp4" type="video/mp4" />
+          <source src="/herovideo.mp4" type="video/mp4" />
         </video>
 
         {/* Lighter, softer directional scrim so the video remains bright and clearly visible */}

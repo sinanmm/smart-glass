@@ -1,13 +1,42 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { Quote, Sparkles, Building, Award, CheckCircle } from "lucide-react";
+import { Quote, Sparkles, Building, Award, CheckCircle, ArrowUpRight } from "lucide-react";
 
 export function ClientLogos() {
-  const featuredClients = [
-    { name: "Malabar Gold & Diamonds", logo: "/images/clients/malabar-gold.png", alt: "Malabar Gold & Diamonds client of SG Smart Glass" },
-    { name: "Meralda Jewels", logo: "/images/clients/meralda-jewels.png", alt: "Meralda Jewels client of SG Smart Glass" },
-    { name: "NURA Health", logo: "/images/clients/nura.png", alt: "NURA AI Health Screening client of SG Smart Glass" },
-    { name: "Unimoni", logo: "/images/clients/unimoni.png", alt: "Unimoni India client of SG Smart Glass" },
+  const featuredWorks = [
+    {
+      name: "Malabar Gold & Diamonds",
+      image: "/images/projects/malabar-gold-featured.png",
+      alt: "Malabar Gold & Diamonds Executive Headquarters Smart Glass Installation",
+      slug: "malabar-gold-diamonds",
+      location: "Kozhikode & Pan-India Offices",
+      role: "Corporate Headquarters",
+    },
+    {
+      name: "Meralda Jewels",
+      image: "/images/projects/meralda-jewels-featured.png",
+      alt: "Meralda Jewels Flagship Showroom Luxury Smart Glass Installation",
+      slug: "meralda-jewels",
+      location: "Kochi, Kerala",
+      role: "Luxury VIP Lounge",
+    },
+    {
+      name: "NURA Health",
+      image: "/images/projects/nura-featured.png",
+      alt: "NURA AI Health Screening Smart Glass Partition Installation",
+      slug: "nura-health",
+      location: "South India Hub",
+      role: "Healthcare Facility",
+    },
+    {
+      name: "Unimoni",
+      image: "/images/projects/unimoni-featured.png",
+      alt: "Unimoni India Corporate Smart Glass Meeting Suites",
+      slug: "unimoni-wizzconnect",
+      location: "Bangalore & Kochi Offices",
+      role: "Financial Meeting Suites",
+    },
   ];
 
   const clientLogos = [
@@ -69,23 +98,32 @@ export function ClientLogos() {
           </p>
         </div>
 
-        {/* Featured Key Clients Badge Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12">
-          {featuredClients.map((client) => (
-            <div
-              key={client.name}
-              className="group p-4 sm:p-5 rounded-2xl light-card-highlight flex flex-col items-center justify-center relative overflow-hidden h-28"
+        {/* Featured Key Works & Projects Grid matching Brochure Page 5 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {featuredWorks.map((work) => (
+            <Link
+              key={work.slug}
+              href={`/projects/${work.slug}`}
+              className="group block rounded-3xl overflow-hidden bg-slate-50 border border-slate-200/90 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 relative cursor-pointer"
             >
-              <div className="relative w-full h-14">
+              <div className="relative aspect-[727/1038] w-full overflow-hidden bg-white">
                 <Image
-                  src={client.logo}
-                  alt={client.alt}
+                  src={work.image}
+                  alt={work.alt}
                   fill
-                  className="object-contain filter group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
+
+                {/* Hover Action Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
+                  <div className="flex items-center justify-between text-white text-xs font-semibold backdrop-blur-md bg-slate-900/75 px-3.5 py-2.5 rounded-xl border border-white/20 shadow-lg">
+                    <span>Explore Case Study</span>
+                    <ArrowUpRight className="w-4 h-4 text-[#66BEAE]" />
+                  </div>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

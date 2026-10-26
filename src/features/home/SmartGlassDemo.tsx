@@ -74,12 +74,12 @@ export function SmartGlassDemo() {
               </Badge>
             </div>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Both partition and facade glass panels appear completely transparent, maintaining an open
+              The smart glass partition appears completely transparent, maintaining an open
               visual connection, natural daylight transmission, and spacious panoramic sightlines.
             </p>
             <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-[#286497]">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Tap to switch all glass to CLEAR</span>
+              <span>Tap to switch glass to CLEAR</span>
             </div>
           </div>
 
@@ -109,24 +109,24 @@ export function SmartGlassDemo() {
               </Badge>
             </div>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Both the partition wall and outer window areas switch simultaneously to silky frosted glass,
+              The partition wall instantly switches to silky frosted glass,
               providing total visual confidentiality while diffusing ambient light evenly throughout the room.
             </p>
             <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-[#2a8575]">
               <Shield className="w-3.5 h-3.5" />
-              <span>Tap to switch all glass to PRIVATE</span>
+              <span>Tap to switch glass to PRIVATE</span>
             </div>
           </div>
         </div>
 
-        {/* Large Interactive Comparison Stage - Dual Area Switching */}
+        {/* Large Interactive Comparison Stage */}
         <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-white p-3 sm:p-5 shadow-2xl border border-slate-200">
           {/* Controller Bar with CLEAR / PRIVATE Toggle Buttons */}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-4 px-2 py-1">
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#66BEAE] animate-pulse" />
               <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">
-                Dual-Zone State Simulator (Partitions & Windows)
+                Live State Simulator (Clear vs Private)
               </span>
             </div>
 
@@ -141,7 +141,7 @@ export function SmartGlassDemo() {
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
-                SWITCH ALL TO CLEAR (ON)
+                SWITCH TO CLEAR (ON)
               </button>
               <button
                 type="button"
@@ -152,7 +152,7 @@ export function SmartGlassDemo() {
                     : "text-slate-600 hover:text-slate-900"
                 }`}
               >
-                SWITCH ALL TO PRIVATE (OFF)
+                SWITCH TO PRIVATE (OFF)
               </button>
             </div>
           </div>
@@ -168,27 +168,27 @@ export function SmartGlassDemo() {
             onPointerMove={handlePointerMove}
             onTouchMove={handleTouchMove}
             role="slider"
-            aria-label="Comparison slider demonstrating clear versus frosted smart glass states across both glass areas"
+            aria-label="Comparison slider demonstrating clear versus frosted smart glass states"
             aria-valuemin={0}
             aria-valuemax={100}
             aria-valuenow={Math.round(sliderPos)}
           >
-            {/* Base Image: BOTH AREAS PRIVATE (Left partition & Right windows frosted) */}
+            {/* Base Image: PRIVATE (Frosted glass partition) */}
             <div className="absolute inset-0 w-full h-full">
               <Image
-                src="/images/hero/hero-smart-glass-both-private.jpg"
-                alt="SG Smart Glass - Dual Area Frosted Privacy State"
+                src="/images/hero/hero-smart-glass-private.jpg"
+                alt="SG Smart Glass - Frosted Privacy State"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1280px) 100vw, 1100px"
               />
               <div className="absolute bottom-6 right-6 bg-slate-900/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase shadow-md flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-slate-300" />
-                Both Areas Private (Power OFF)
+                Private Mode (Power OFF)
               </div>
             </div>
 
-            {/* Clipped Image: BOTH AREAS CLEAR (Transparent) */}
+            {/* Clipped Image: CLEAR (Transparent glass partition) */}
             <div
               className="absolute inset-0 h-full overflow-hidden"
               style={{ width: `${sliderPos}%` }}
@@ -196,14 +196,14 @@ export function SmartGlassDemo() {
               <div className="relative w-full h-full min-w-[320px] sm:min-w-[640px] md:min-w-[900px] lg:min-w-[1060px]">
                 <Image
                   src="/images/hero/hero-smart-glass-clear.jpg"
-                  alt="SG Smart Glass - Dual Area Transparent Clear State"
+                  alt="SG Smart Glass - Transparent Clear State"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1280px) 100vw, 1100px"
                 />
                 <div className="absolute bottom-6 left-6 bg-[#286497]/90 backdrop-blur-md text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold tracking-wider uppercase shadow-md flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-[#66BEAE]" />
-                  Both Areas Clear (Power ON)
+                  Clear View (Power ON)
                 </div>
               </div>
             </div>
@@ -226,7 +226,7 @@ export function SmartGlassDemo() {
               <span className="font-semibold text-slate-700">Simultaneous transition in under 1/10th of a second</span>
             </div>
             <div className="text-slate-500">
-              Drag horizontally across the space or tap buttons above to switch glass in both areas
+              Drag horizontally across the space or tap buttons above to switch glass states
             </div>
           </div>
         </div>
