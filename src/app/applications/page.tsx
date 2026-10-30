@@ -25,7 +25,7 @@ import { FinalCTA } from "@/features/home/FinalCTA";
 export const metadata: Metadata = {
   title: "Smart Glass Applications & Installation",
   description:
-    "See smart glass for offices, homes, hospitality, healthcare and more. Learn about PDLC smart film preparation and installation coordination across India.",
+    "See smart glass for offices, homes, hospitality, healthcare and more. Learn about PDLC smart film preparation and installation coordination.",
 };
 
 export default function ApplicationsPage() {
@@ -141,7 +141,7 @@ export default function ApplicationsPage() {
             badge="Engineering & Coordination"
             badgeVariant="teal"
             title="How an SG Smart Glass Project Works"
-            description="Our proven six-stage coordination framework ensures seamless execution across Kerala and throughout India."
+            description="Our proven six-stage coordination framework ensures seamless precision execution for every architectural project."
             align="center"
             className="mb-16"
           />

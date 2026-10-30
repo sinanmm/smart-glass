@@ -58,7 +58,7 @@ export function Footer() {
               </div>
               <div>
                 <h4 className="font-semibold text-slate-900 text-sm">
-                  All-India Installation Capability
+                  Turnkey Installation Capability
                 </h4>
                 <p className="text-xs text-slate-500 mt-0.5">
                   Smart glass installation, site planning & dedicated after-sales support
@@ -93,7 +93,7 @@ export function Footer() {
                   {siteConfig.legalCompanyName}
                 </span>
                 . We provide custom PDLC smart film preparation, site coordination,
-                all-India installation (smart glass only), and after-sales support across India and the UAE.
+                turnkey installation (smart glass only), and dedicated after-sales support across the region and the UAE.
               </p>
 
               {/* Social Media Links */}

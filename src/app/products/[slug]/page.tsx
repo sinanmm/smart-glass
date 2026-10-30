@@ -74,7 +74,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       "@type": "Brand",
       name: siteConfig.brandName,
     },
-    manufacturer: {
+    provider: {
       "@type": "Organization",
       name: siteConfig.legalCompanyName,
     },
@@ -132,8 +132,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <div className="p-4 rounded-xl bg-[#F5F9FB] border border-slate-200/70 text-xs text-slate-600 flex items-start gap-3">
                 <Sparkles className="w-4 h-4 text-[#66BEAE] shrink-0 mt-0.5" />
                 <p>
-                  Every panel is custom prepared, precision-cut, and tested at the Technical Glass
-                  and Glazing India production facility according to confirmed architectural
+                  Every panel is custom prepared, precision-cut, and tested at our specialized
+                  preparation and quality facility according to confirmed architectural
                   measurements.
                 </p>
               </div>

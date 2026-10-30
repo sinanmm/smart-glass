@@ -15,9 +15,9 @@ import { QuoteForm } from "@/features/contact/QuoteForm";
 import { siteConfig } from "@/content/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Contact SG Smart Glass | Smart Glass Quote India",
+  title: "Contact SG Smart Glass | Smart Glass Consultation & Quote",
   description:
-    "Contact Technical Glass and Glazing India Pvt. Ltd. for smart glass, switchable privacy glass and PDLC smart film enquiries across India and the UAE.",
+    "Contact Technical Glass and Glazing for smart glass, switchable privacy glass and PDLC smart film enquiries across the region and the UAE.",
 };
 
 interface ContactPageProps {
@@ -102,10 +102,10 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                       Direct Telephone Lines
                     </h4>
 
-                    {/* Primary India */}
+                    {/* Primary Support */}
                     <div className="mt-2">
                       <span className="text-xs text-slate-500 block">
-                        India Primary Desk:
+                        Primary Support Desk:
                       </span>
                       <a
                         href={`tel:${siteConfig.contact.indiaPrimary.tel}`}
@@ -115,7 +115,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
                       </a>
                     </div>
 
-                    {/* Additional India */}
+                    {/* Additional Contacts */}
                     <div className="mt-3 pt-3 border-t border-slate-200/60 space-y-1.5 text-xs text-slate-600">
                       <span className="text-slate-400 block font-medium">
                         Additional Technical Contacts:

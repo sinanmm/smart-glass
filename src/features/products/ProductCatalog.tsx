@@ -168,7 +168,7 @@ export function ProductCatalog() {
             <Info className="w-4 h-4 text-[#286497] shrink-0 mt-0.5" />
             <p>
               Product designations (SG 95%, SG 91%, SG 89%) designate optical clarity tiers.
-              All smart film is precision pre-cut, busbar-fitted, and tested to confirmed millimeter dimensions at our specialized production facility in India.
+              All smart film is precision pre-cut, busbar-fitted, and tested to confirmed millimeter dimensions at our specialized preparation and testing facility.
             </p>
           </div>
         </div>

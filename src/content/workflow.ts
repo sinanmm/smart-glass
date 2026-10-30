@@ -39,12 +39,12 @@ export const projectWorkflow: WorkflowStep[] = [
     title: "Film Preparation & Customisation",
     shortTitle: "Film Preparation",
     summary:
-      "SG prepares and customises PDLC film at its production unit according to confirmed measurements.",
+      "SG prepares and customises PDLC film at its specialized customization facility according to confirmed measurements.",
     detail:
-      "Using precision cutting and busbar terminal attachment in our controlled facility, each smart film panel is customized to exact dimensions. This process is film preparation and customisation, not raw PDLC film manufacturing.",
+      "Using precision cutting and busbar terminal attachment in our controlled facility, each smart film panel is customized to exact dimensions for flawless optical performance.",
     timing: "Workshop Phase",
-    responsibility: "SG Smart Glass Production Unit",
-    keyTakeaway: "Customized film preparation at SG unit, not raw film manufacturing.",
+    responsibility: "SG Smart Glass Technical Facility",
+    keyTakeaway: "Customized film preparation at SG unit with strict quality testing.",
   },
   {
     step: 4,

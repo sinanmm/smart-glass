@@ -27,9 +27,9 @@ import { siteConfig } from "@/content/siteConfig";
 import { FinalCTA } from "@/features/home/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "About Us | Technical Glass and Glazing India Pvt. Ltd. | SG Smart Glass",
+  title: "About Us | Technical Glass and Glazing | SG Smart Glass",
   description:
-    "Learn about Technical Glass and Glazing India Pvt. Ltd., our Dubai parent company Century Toughened Glass & Broadway Group with 35+ years experience, and SG Smart Glass.",
+    "Learn about Technical Glass and Glazing, our Dubai parent company Century Toughened Glass & Broadway Group with 35+ years experience, and SG Smart Glass.",
 };
 
 export default function AboutPage() {
@@ -46,8 +46,8 @@ export default function AboutPage() {
     },
     {
       num: ".03",
-      title: "Own Production Facility in India",
-      desc: "High-precision manufacturing, custom cutting, and clean-room testing at Nedumbassery, Ernakulam, Kerala.",
+      title: "Specialized Customization & Testing Facility",
+      desc: "High-precision film preparation, custom cutting, and clean-room testing for flawless optical performance.",
     },
     {
       num: ".04",
@@ -61,7 +61,7 @@ export default function AboutPage() {
     },
     {
       num: ".06",
-      title: "All-India Installation (Smart Glass Only)",
+      title: "Turnkey Installation (Smart Glass Only)",
       desc: "Dedicated in-house technicians executing smart glass projects seamlessly in corporate, residential, and commercial spaces.",
     },
     {
@@ -81,7 +81,7 @@ export default function AboutPage() {
     },
     {
       num: ".10",
-      title: "Dedicated Service Team Available Across India",
+      title: "Dedicated Support & Technical Service",
       desc: "Responsive ongoing technical support, preventive checks, and reliable after-sales service throughout the project lifecycle.",
     },
   ];
@@ -90,7 +90,7 @@ export default function AboutPage() {
     {
       year: "Over 35 Years",
       title: "Industry Heritage in Dubai",
-      desc: "Our parent group established the renowned Century Toughened Glass Plant and Broadway Group for architectural hardware manufacturing in Dubai.",
+      desc: "Our parent group established the renowned Century Toughened Glass Plant and Broadway Group for architectural glass and hardware engineering in Dubai.",
       tag: "Heritage",
     },
     {
@@ -101,9 +101,9 @@ export default function AboutPage() {
     },
     {
       year: "2023",
-      title: "Operations Launched in India",
-      desc: "Established Technical Glass and Glazing India Private Limited with in-house production facilities to serve India's smart glass market under the brand SG Smart Glass.",
-      tag: "India Expansion",
+      title: "SG Smart Glass Brand Launch",
+      desc: "Established Technical Glass and Glazing with specialized in-house preparation and testing facilities to deliver premium switchable solutions under the brand SG Smart Glass.",
+      tag: "Brand Launch",
     },
   ];
 
@@ -117,14 +117,14 @@ export default function AboutPage() {
               Company Background & Heritage
             </Badge>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight leading-tight">
-              About Technical Glass and Glazing India
+              About Technical Glass and Glazing
             </h1>
             <p className="mt-5 text-base sm:text-lg text-slate-700 leading-relaxed font-medium">
-              Technical Glass and Glazing India Private Limited is a trusted name in the glass industry.
+              Technical Glass and Glazing is a trusted name in advanced architectural glazing and smart glass solutions.
               Our parent company is based in Dubai, where we successfully established the renowned{" "}
               <strong className="text-slate-900 font-bold">Century Toughened Glass Plant</strong> and the{" "}
-              <strong className="text-slate-900 font-bold">Broadway Group</strong> for architectural hardware
-              manufacturing, with over 35 years of expertise and innovation in the glass industry.
+              <strong className="text-slate-900 font-bold">Broadway Group</strong> for architectural glass and hardware
+              engineering, with over 35 years of expertise and innovation in the glass industry.
             </p>
           </div>
         </Container>
@@ -139,7 +139,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl">
                 <Image
                   src="/images/about/facility.jpg"
-                  alt="Technical Glass and Glazing India production facility in Nedumbassery Kerala"
+                  alt="SG Smart Glass precision customization and testing facility"
                   fill
                   priority
                   className="object-cover"
@@ -178,7 +178,7 @@ export default function AboutPage() {
               </Badge>
 
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight leading-snug">
-                Pioneering Smart Glass Technology Across the Globe & India
+                Pioneering Smart Glass Technology Across the Globe
               </h2>
 
               <div className="space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
@@ -188,17 +188,14 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  In India, we launched our operations in 2023 under the name{" "}
-                  <strong className="text-slate-900 font-bold">
-                    Technical Glass and Glazing India Private Limited
-                  </strong>
-                  . Our smart glass products are marketed under the premium brand:{" "}
-                  <strong className="text-[#286497] font-bold">SG Smart Glass</strong>.
+                  We deliver specialized smart glass and switchable privacy solutions under the premium brand:{" "}
+                  <strong className="text-[#286497] font-bold">SG Smart Glass</strong>, backed by{" "}
+                  <strong className="text-slate-900 font-bold">Technical Glass and Glazing</strong>.
                 </p>
 
                 <p>
-                  We specialize in the manufacturing and installation of advanced smart glass solutions
-                  with in-house production facilities located in Nedumbassery, Ernakulam, Kerala. Our
+                  We specialize in the customization, precision preparation, and installation of advanced smart glass solutions
+                  with in-house testing and cutting facilities in Nedumbassery, Ernakulam, Kerala. Our
                   solutions are designed for luxury interiors, commercial spaces, corporate offices,
                   villas, jewellery showrooms, hospitals, hotels, and modern architectural landmarks.
                 </p>
@@ -207,11 +204,11 @@ export default function AboutPage() {
               <div className="pt-4 border-t border-slate-200 flex flex-wrap gap-4 text-xs font-semibold text-slate-700">
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#66BEAE]" />
-                  Own Indian Production Facility
+                  In-House Customization Facility
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#66BEAE]" />
-                  All-India Installation (Smart Glass Only)
+                  Turnkey Installation (Smart Glass Only)
                 </span>
                 <span className="flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4 text-[#66BEAE]" />
@@ -230,7 +227,7 @@ export default function AboutPage() {
             badge="Our Journey"
             badgeVariant="blue"
             title="A Proven Track Record of Excellence"
-            description="From establishing foundational glass plants in the Middle East to bringing in-house smart glass manufacturing to India."
+            description="From establishing foundational glass plants in the Middle East to delivering precision smart glass technology and turnkey architectural solutions."
             align="center"
             className="mb-14"
           />
@@ -303,14 +300,14 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
                 <Badge variant="blue" size="sm" className="mb-3">
-                  Registered Headquarters & Plant
+                  Operations & Experience Centre
                 </Badge>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Technical Glass and Glazing India Pvt. Ltd.
+                  Technical Glass and Glazing
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   Palaprassery Juma Masjid Complex, Chengamanad P.O, Nedumbassery,
-                  Ernakulam District, Kerala, India — Pin: 683578
+                  Ernakulam District, Kerala — Pin: 683578
                 </p>
                 <div className="mt-4 space-y-1.5 text-xs text-slate-700">
                   <div className="flex items-center gap-2">

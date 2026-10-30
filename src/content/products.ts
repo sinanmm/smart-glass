@@ -110,7 +110,7 @@ export const smartFilmVariants: Product[] = [
       "Consistent light diffusion and rapid frosted privacy",
       "Switchable on/off operation (< 100 milliseconds)",
       "99% UV filtration",
-      "Custom prepared at SG production facility in India",
+      "Custom prepared at SG specialized testing & preparation facility",
       "Ideal for interior office partitions and clinic cubicles",
     ],
     approvedSpecs: [
@@ -119,7 +119,7 @@ export const smartFilmVariants: Product[] = [
       { label: "UV Resistance", value: "99% UV Block" },
       { label: "Thermal Control", value: "Up to 20% Solar Heat Reduction" },
       { label: "Warranty", value: "Up to 5-Year Warranty (3-Yr Replacement + Extended)" },
-      { label: "Installation", value: "All-India installation (smart glass only)" },
+      { label: "Installation", value: "Turnkey installation (smart glass only)" },
     ],
     applications: [
       "Internal Office Partitions & Staff Rooms",

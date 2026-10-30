@@ -30,7 +30,7 @@ export function Hero() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/herovideo.mp4" type="video/mp4" />
+          <source src="/hero1.mp4" type="video/mp4" />
         </video>
 
         {/* Lighter, softer directional scrim so the video remains bright and clearly visible */}
@@ -66,7 +66,7 @@ export function Hero() {
           <p className="mt-3.5 text-sm sm:text-base text-slate-100/95 leading-relaxed font-normal max-w-xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)]">
             Switch between crystal clarity and complete privacy at the touch of a button.{" "}
             <strong className="text-white font-semibold">SG Smart Glass</strong> integrates advanced
-            switchable smart film into modern architectural spaces across India.
+            switchable smart film into modern architectural spaces.
           </p>
 
           {/* Action CTA Buttons */}

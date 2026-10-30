@@ -1,16 +1,16 @@
 export const siteConfig = {
   brandName: "SG Smart Glass",
-  legalCompanyName: "Technical Glass and Glazing India Pvt. Ltd.",
+  legalCompanyName: "Technical Glass and Glazing",
   tagline: "SMART GLASS. SMARTER PRIVACY.",
   description:
-    "Discover SG Smart Glass for switchable privacy, powered by PDLC smart film. Explore variants, applications and installation across India.",
+    "Discover SG Smart Glass for switchable privacy, powered by PDLC smart film. Explore variants, applications and professional installation.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://sgsmartglass.com",
   
   // Logos
   logo: {
     primary: "/brand/sg-logo-transparent.png",
     fallback: "/brand/sg-logo.png",
-    alt: "SG Smart Glass - Powered by Technical Glass and Glazing India Pvt. Ltd.",
+    alt: "SG Smart Glass - Technical Glass and Glazing",
   },
 
   // Contact Information (Primary source: PDF Website Development Brief)
@@ -65,7 +65,7 @@ export const siteConfig = {
   // Experience & Positioning
   experience: {
     years: "35+",
-    attribution: "Technical Glass and Glazing India Pvt. Ltd. / Group Industry Expertise",
+    attribution: "Technical Glass and Glazing / Group Industry Expertise",
     leadTerm: "Smart Glass",
     underlyingTech: "PDLC Smart Film",
     scopeNotice:

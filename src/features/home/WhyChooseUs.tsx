@@ -7,7 +7,7 @@ import { siteConfig } from "@/content/siteConfig";
 import {
   Award,
   Globe2,
-  Factory,
+  Layers,
   Sparkles,
   Zap,
   Users,
@@ -30,21 +30,21 @@ export function WhyChooseUs() {
       icon: Globe2,
       title: "International Expertise & Global Standards",
       description:
-        "Delivering advanced HD Smart Glass solutions across the globe since 2010 with international manufacturing benchmarks.",
+        "Delivering advanced HD Smart Glass solutions across the globe since 2010 with international quality and engineering benchmarks.",
     },
     {
       num: "03",
-      icon: Factory,
-      title: "Own In-House Production Facility in India",
+      icon: Layers,
+      title: "Specialized In-House Customization Facility",
       description:
-        "State-of-the-art specialized production and custom film cutting unit located in Nedumbassery, Ernakulam, Kerala.",
+        "State-of-the-art precision preparation, custom film cutting, and quality testing facility ensuring millimeter-accurate edge geometry.",
     },
     {
       num: "04",
       icon: Users,
-      title: "All-India Installation & Dedicated Service",
+      title: "Turnkey Installation & Dedicated Service",
       description:
-        "Dedicated technical and service teams available across all Indian states for specialized smart glass installation and support.",
+        "Dedicated technical and service teams available for specialized smart glass installation, electrical coordination, and ongoing support.",
     },
     {
       num: "05",
@@ -71,7 +71,7 @@ export function WhyChooseUs() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[4/5] bg-slate-100">
               <Image
                 src="/images/about/facility.jpg"
-                alt="SG Smart Glass precision film preparation and testing unit in India"
+                alt="SG Smart Glass precision film preparation and testing unit"
                 fill
                 quality={95}
                 className="object-cover"
@@ -106,8 +106,8 @@ export function WhyChooseUs() {
             <SectionHeading
               badge="Why Choose SG"
               badgeVariant="blue"
-              title="Global Standards. In-House Indian Manufacturing."
-              description="Backed by over 35 years of industry excellence, SG Smart Glass combines world-class PDLC technology with dedicated all-India installation capability."
+              title="Global Standards. Architectural Precision."
+              description="Backed by over 35 years of industry excellence, SG Smart Glass combines world-class PDLC technology with dedicated turnkey installation capability."
               align="left"
               className="mb-8"
             />

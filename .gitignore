@@ -40,3 +40,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# raw source screenshot folders
+/public/ MoD jewellery /
+/public/Jfs logistics info park/
+/public/Malabar gold /
+/public/Meralada Jewellery chairman home/
+/public/Meralada Jewellery co-operate office & Jewellery  /
+/public/Nura hospital /
+/public/Unimoni co-operate office /
+/public/sreenarayan textiles kolkata/

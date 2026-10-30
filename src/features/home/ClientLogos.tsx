@@ -1,45 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
-import { Quote, Sparkles, Building, Award, CheckCircle, ArrowUpRight } from "lucide-react";
+import { Award, Quote } from "lucide-react";
 
 export function ClientLogos() {
-  const featuredWorks = [
-    {
-      name: "Malabar Gold & Diamonds",
-      image: "/images/projects/malabar-gold-featured.png",
-      alt: "Malabar Gold & Diamonds Executive Headquarters Smart Glass Installation",
-      slug: "malabar-gold-diamonds",
-      location: "Kozhikode & Pan-India Offices",
-      role: "Corporate Headquarters",
-    },
-    {
-      name: "Meralda Jewels",
-      image: "/images/projects/meralda-jewels-featured.png",
-      alt: "Meralda Jewels Flagship Showroom Luxury Smart Glass Installation",
-      slug: "meralda-jewels",
-      location: "Kochi, Kerala",
-      role: "Luxury VIP Lounge",
-    },
-    {
-      name: "NURA Health",
-      image: "/images/projects/nura-featured.png",
-      alt: "NURA AI Health Screening Smart Glass Partition Installation",
-      slug: "nura-health",
-      location: "South India Hub",
-      role: "Healthcare Facility",
-    },
-    {
-      name: "Unimoni",
-      image: "/images/projects/unimoni-featured.png",
-      alt: "Unimoni India Corporate Smart Glass Meeting Suites",
-      slug: "unimoni-wizzconnect",
-      location: "Bangalore & Kochi Offices",
-      role: "Financial Meeting Suites",
-    },
-  ];
-
   const clientLogos = [
+    { name: "Malabar Gold & Diamonds", file: "/images/clients/malabar-gold.png", slug: "malabar-gold-diamonds" },
+    { name: "Meralda Jewels", file: "/images/clients/meralda-jewels.png", slug: "meralda-jewels" },
+    { name: "NURA Health", file: "/images/clients/nura.png", slug: "nura-health" },
+    { name: "Unimoni", file: "/images/clients/unimoni.png", slug: "unimoni-wizzconnect" },
+    { name: "M.O.D Signature Jewellery", file: "/images/clients/mod-jewellery.png", slug: "mod-jewellery" },
+    { name: "JFS Logistics", file: "/images/clients/jfs-logistics.png", slug: "jfs-logistics" },
     { name: "Dubai Police", file: "/images/clients/dubai-police.png" },
     { name: "UAE Ministry of Education", file: "/images/clients/uae-moe.png" },
     { name: "ADNOC", file: "/images/clients/adnoc.png" },
@@ -49,9 +20,7 @@ export function ClientLogos() {
     { name: "Dubai Holding", file: "/images/clients/dubai-holding.png" },
     { name: "Meraas", file: "/images/clients/meraas.png" },
     { name: "Abu Dhabi Public Health Centre", file: "/images/clients/adphc.png" },
-    { name: "M.O.D Signature Jewellery", file: "/images/clients/mod-jewellery.png" },
     { name: "Preserve Chits", file: "/images/clients/preserve-chits.png" },
-    { name: "JFS Logistics", file: "/images/clients/jfs-logistics.png" },
   ];
 
   const testimonials = [
@@ -73,7 +42,7 @@ export function ClientLogos() {
     },
     {
       name: "Lakshmikanth P",
-      role: "Administration Head Unimoni India",
+      role: "Administration Head, Unimoni",
       company: "A WIZZ FINANCIAL GROUP",
       image: "/images/testimonials/lakshmikanth.jpg",
       quote:
@@ -98,58 +67,43 @@ export function ClientLogos() {
           </p>
         </div>
 
-        {/* Featured Key Works & Projects Grid matching Brochure Page 5 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {featuredWorks.map((work) => (
-            <Link
-              key={work.slug}
-              href={`/projects/${work.slug}`}
-              className="group block rounded-3xl overflow-hidden bg-slate-50 border border-slate-200/90 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 relative cursor-pointer"
-            >
-              <div className="relative aspect-[727/1038] w-full overflow-hidden bg-white">
+        {/* Unified Client Logos Grid in Full Original Colors */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 items-center mb-16">
+          {clientLogos.map((client) => {
+            const logoContent = (
+              <div className="relative w-full h-12 sm:h-14 max-w-[200px]">
                 <Image
-                  src={work.image}
-                  alt={work.alt}
+                  src={client.file}
+                  alt={`${client.name} logo`}
                   fill
-                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-contain hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
-
-                {/* Hover Action Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5">
-                  <div className="flex items-center justify-between text-white text-xs font-semibold backdrop-blur-md bg-slate-900/75 px-3.5 py-2.5 rounded-xl border border-white/20 shadow-lg">
-                    <span>Explore Case Study</span>
-                    <ArrowUpRight className="w-4 h-4 text-[#66BEAE]" />
-                  </div>
-                </div>
               </div>
-            </Link>
-          ))}
-        </div>
+            );
 
-        {/* Prestigious Logos Grid (12 logos from Brochure Page 5) */}
-        <div className="p-6 sm:p-8 rounded-3xl bg-[#F5F9FB] border border-slate-200/90 shadow-sm mb-16">
-          <span className="text-[11px] font-bold tracking-wider text-slate-400 uppercase text-center block mb-6">
-            Institutional, Enterprise & Hospitality Portfolio
-          </span>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6 items-center">
-            {clientLogos.map((client) => (
+            if (client.slug) {
+              return (
+                <Link
+                  key={client.name}
+                  href={`/projects/${client.slug}`}
+                  className="group flex items-center justify-center p-3 sm:p-4 h-20 sm:h-24 transition-all duration-300 cursor-pointer"
+                  title={`View ${client.name} Project Case Study`}
+                >
+                  {logoContent}
+                </Link>
+              );
+            }
+
+            return (
               <div
                 key={client.name}
-                className="bg-white p-3 rounded-xl border border-slate-200/70 shadow-xs hover:shadow-md hover:border-[#286497]/30 transition-all flex items-center justify-center h-16 group"
+                className="group flex items-center justify-center p-3 sm:p-4 h-20 sm:h-24 transition-all duration-300"
               >
-                <div className="relative w-full h-10">
-                  <Image
-                    src={client.file}
-                    alt={`${client.name} logo`}
-                    fill
-                    className="object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                    sizes="(max-width: 768px) 33vw, 16vw"
-                  />
-                </div>
+                {logoContent}
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
 
         {/* Client Testimonials Carousel/Cards from Brochure Page 4 */}

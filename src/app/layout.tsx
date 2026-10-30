@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | SG Smart Glass",
   },
   description:
-    "Discover SG Smart Glass for switchable privacy, powered by PDLC smart film. Explore variants, applications and installation across India.",
+    "Discover SG Smart Glass for switchable privacy, powered by PDLC smart film. Explore variants, applications and professional installation.",
   keywords: [
     "Smart Glass",
     "Switchable Smart Glass",
@@ -36,19 +36,19 @@ export const metadata: Metadata = {
     "Smart Film Installation",
     "Smart Glass for Offices",
     "Smart Glass for Homes",
-    "Smart Glass in India",
-    "Technical Glass and Glazing India",
+    "Switchable Glass",
+    "Technical Glass and Glazing",
   ],
   authors: [{ name: siteConfig.legalCompanyName }],
   creator: siteConfig.legalCompanyName,
   openGraph: {
     type: "website",
-    locale: "en_IN",
+    locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.brandName,
     title: "Smart Glass & PDLC Smart Film Solutions | SG Smart Glass",
     description:
-      "Discover SG Smart Glass for switchable privacy, powered by PDLC smart film. Explore variants, applications and installation across India.",
+      "Discover SG Smart Glass for switchable privacy, powered by PDLC smart film. Explore variants, applications and professional installation.",
     images: [
       {
         url: "/images/hero/hero-smart-glass-clear.jpg",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Smart Glass & PDLC Smart Film Solutions | SG Smart Glass",
     description:
-      "Discover SG Smart Glass for switchable privacy, powered by PDLC smart film. Explore variants, applications and installation across India.",
+      "Discover SG Smart Glass for switchable privacy, powered by PDLC smart film. Explore variants, applications and professional installation.",
     images: ["/images/hero/hero-smart-glass-clear.jpg"],
   },
   robots: {

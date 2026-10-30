@@ -3,7 +3,7 @@ export interface ProjectItem {
   slug: string;
   title: string;
   clientName: string;
-  category: "Commercial" | "Residential" | "Healthcare" | "Hospitality" | "Special Projects";
+  category: "Commercial" | "Residential" | "Healthcare" | "Special Projects";
   location: string;
   clientRequirement: string;
   sgSolution: string;
@@ -26,17 +26,19 @@ export const projects: ProjectItem[] = [
   {
     id: "malabar-gold-diamonds",
     slug: "malabar-gold-diamonds",
-    title: "Malabar Gold & Diamonds Executive Headquarters",
+    title: "Malabar Gold & Diamonds Director's Luxury Residence",
     clientName: "Malabar Gold & Diamonds",
-    category: "Commercial",
-    location: "Kozhikode & Pan-India Offices",
+    category: "Residential",
+    location: "Kozhikode (Calicut), Kerala",
     clientRequirement:
-      "A flagship corporate headquarters with high aesthetic standards required an open visual daylight connection during daily operations, paired with instantaneous confidential privacy for executive leadership cabins and board meetings.",
+      "The private residence of Malabar Gold & Diamonds' Director required an architectural switchable privacy glass system connecting the master bedroom suite and luxury bathroom overlooking private greenery, delivering total privacy on demand without blocking daylight.",
     sgSolution:
-      "Engineered custom-prepared SG 95% Clear View smart glass partition panels with concealed perimeter wiring channels and multi-zone RF remote control integration.",
+      "Engineered custom-prepared SG 95% Clear View smart glass partition panels with concealed perimeter wiring channels and multi-zone remote control integration.",
     result:
-      "Instantaneous switch between crystal-clear daylight transmission and sound-buffered frosted privacy. Completely eliminates traditional dusty blinds while matching the brand's luxurious architectural aesthetic.",
+      "Instantaneous switch between crystal-clear daylight transmission and sound-buffered frosted privacy. Completely eliminates traditional dusty blinds while matching the director's luxurious residence aesthetic.",
     image: "/images/projects/malabar-gold.jpg",
+    clearImage: "/images/projects/malabar-gold-clear.jpg",
+    privateImage: "/images/projects/malabar-gold-private.jpg",
     isVerifiedSGInstallation: true,
     testimonial: {
       author: "Nishad AK",
@@ -47,26 +49,28 @@ export const projects: ProjectItem[] = [
       avatar: "/images/testimonials/nishad-ak.jpg",
     },
     highlights: [
+      "Director's luxury private master suite & bathroom",
       "SG 95% Clear View Ultra-High Clarity",
       "Concealed electrical wire routing",
-      "RF Wireless remote control integration",
-      "Executive boardroom & discussion suites",
+      "Wireless remote control & touch switch operation",
     ],
   },
   {
     id: "meralda-jewels",
     slug: "meralda-jewels",
-    title: "Meralda Jewels Luxury Flagship VIP Lounge",
+    title: "Meralda Jewels Corporate Office & VIP Diamond Lounge",
     clientName: "Meralda Jewels",
     category: "Special Projects",
     location: "Kochi, Kerala",
     clientRequirement:
-      "A premier high-end jewellery showroom required a switchable partition separating the VIP diamond viewing salon from public retail spaces, integrating harmoniously with bespoke gold geometric lattice metalwork.",
+      "Following the successful residential installation, Meralda Jewels required custom switchable partitions for their corporate office and flagship diamond viewing salon, integrating harmoniously with bespoke gold decorative lattice metalwork.",
     sgSolution:
-      "Custom prepared SG 91% Clear View switchable smart glass integrated directly behind the decorative metal trellis, linked to discreet wireless touch sensors.",
+      "Custom-fabricated SG switchable smart glass precision-fitted behind ornamental brass-finish latticework, connected to discreet wireless touch sensors.",
     result:
-      "Delivers a dramatic transformation from open showroom transparency to private consultation mode, offering high-net-worth clients total privacy during exclusive diamond consultations.",
-    image: "/images/projects/meralda-jewels.jpg",
+      "Enables instant transformation from an open showroom daylight aesthetic to an exclusive private consultation salon for high-net-worth diamond clientele.",
+    image: "/images/projects/meralda-jewels-vip-lounge.jpg",
+    clearImage: "/images/projects/meralda-jewels-vip-lounge-clear.jpg",
+    privateImage: "/images/projects/meralda-jewels-vip-lounge-private.jpg",
     isVerifiedSGInstallation: true,
     testimonial: {
       author: "Abdul Jaleel Edathil",
@@ -89,14 +93,16 @@ export const projects: ProjectItem[] = [
     title: "NURA AI Health Screening Center",
     clientName: "NURA Health",
     category: "Healthcare",
-    location: "South India Hub",
+    location: "Healthcare Hub",
     clientRequirement:
       "Modern AI medical diagnosis center required hygienic, curtain-free privacy partitions and double-door enclosures between screening suites that can be easily sanitized according to sterile healthcare protocols.",
     sgSolution:
       "Precision-fitted smart glass double doors and partition panels framed in custom matte black architectural profiles, wired with touchless medical sensor switches.",
     result:
       "Maintains medical-grade infection control with zero dust retention, giving physicians transparent visual supervision or instant patient privacy at a touch.",
-    image: "/images/projects/nura.jpg",
+    image: "/images/projects/nura-health.jpg",
+    clearImage: "/images/projects/nura-health-clear.jpg",
+    privateImage: "/images/projects/nura-health-private.jpg",
     isVerifiedSGInstallation: true,
     highlights: [
       "Black-framed architectural double doors",
@@ -109,118 +115,136 @@ export const projects: ProjectItem[] = [
     id: "unimoni-wizzconnect",
     slug: "unimoni-wizzconnect",
     title: "Unimoni - WizzConnect 74 Meeting Suites",
-    clientName: "Unimoni India (A Wizz Financial Group Company)",
+    clientName: "Unimoni (A Wizz Financial Group Company)",
     category: "Commercial",
-    location: "Bangalore & Kochi Offices",
+    location: "Kochi Office, Kerala",
     clientRequirement:
-      "Corporate administration intended to install frosted film stickers on glass cabins, but sought a modern dynamic solution that could preserve natural light and modern corporate appeal.",
+      "Corporate administration intended to install frosted film stickers on glass cabins at their Kochi office, but sought a modern dynamic solution that could preserve natural light transmission and enhance corporate appeal.",
     sgSolution:
       "Installed SG Smart Glass switchable partitions with integrated company logo branding, automated with meeting room occupancy wall switches.",
     result:
       "Replaced static frosted stickers with dynamic switchable privacy, transforming ordinary glass meeting rooms into high-tech interactive collaboration spaces.",
-    image: "/images/projects/unimoni.jpg",
+    image: "/images/projects/unimoni-wizzconnect.jpg",
+    clearImage: "/images/projects/unimoni-wizzconnect-clear.jpg",
+    privateImage: "/images/projects/unimoni-wizzconnect-private.jpg",
     isVerifiedSGInstallation: true,
     testimonial: {
       author: "Lakshmikanth P",
-      role: "Administration Head Unimoni India",
+      role: "Administration Head, Unimoni",
       company: "A WIZZ FINANCIAL GROUP",
       quote:
         "We planned to use frosted stickers, but SG Smart Glass transformed our meeting rooms with a smarter solution and excellent service.",
       avatar: "/images/testimonials/lakshmikanth.jpg",
     },
     highlights: [
+      "Kochi Corporate Office installation",
       "Eliminated static frosted vinyl stickers",
-      "Integrated corporate brand identity",
-      "Automated wall switch controls",
-      "All-India installation & technical support",
+      "Integrated WizzConnect 74 corporate branding",
+      "Automated meeting room wall switch controls",
     ],
   },
   {
-    id: "dubai-police-hq",
-    slug: "dubai-police-hq",
-    title: "Dubai Police Strategic Operations Center",
-    clientName: "Dubai Police",
+    id: "meralda-jewels-chairman-residence",
+    slug: "meralda-jewels-chairman-residence",
+    title: "Meralda Jewels Chairman's Luxury Residence",
+    clientName: "Meralda Jewels",
+    category: "Residential",
+    location: "Kochi, Kerala",
+    clientRequirement:
+      "The Chairman of Meralda Jewels required switchable privacy smart glass for his private luxury residence, providing instant privacy control for master living and ensuite spaces while maintaining an expansive modern interior feeling.",
+    sgSolution:
+      "Installed custom SG smart glass panels with tailored moisture-resistant edge sealing and synchronized remote controls.",
+    result:
+      "Seamless switch between pristine transparent daylight connection and complete frosted privacy, setting a benchmark for luxury residential automation in Kerala.",
+    image: "/images/projects/meralda-jewels-chairman-residence.jpg",
+    clearImage: "/images/projects/meralda-jewels-chairman-residence-clear.jpg",
+    privateImage: "/images/projects/meralda-jewels-chairman-residence-private.jpg",
+    isVerifiedSGInstallation: true,
+    testimonial: {
+      author: "Abdul Jaleel Edathil",
+      role: "Chairman & MD",
+      company: "Meralda Jewels",
+      quote:
+        "The comfort and convenience of SG Smart Glass impressed me so much at home that I chose to install it in my office as well.",
+      avatar: "/images/testimonials/abdul-jaleel.jpg",
+    },
+    highlights: [
+      "Chairman's luxury residence installation",
+      "Moisture-sealed smart glass panels",
+      "Instant remote control operation",
+      "Seamless residential space transition",
+    ],
+  },
+  {
+    id: "mod-jewellery",
+    slug: "mod-jewellery",
+    title: "M.O.D Signature Jewellery Flagship Atelier",
+    clientName: "M.O.D Signature Jewellery",
+    category: "Special Projects",
+    location: "Kochi, Kerala",
+    clientRequirement:
+      "High-end artisanal jewellery atelier required curved architectural switchable glass partitions for exclusive bespoke design consultations, ensuring client confidentiality while preserving an open, illuminated salon.",
+    sgSolution:
+      "Custom-engineered curved SG switchable smart glass panels tailored to precise radius curves with concealed edge power connections.",
+    result:
+      "A breathtaking curved architectural statement that flips from glass-walled elegance to full frosted opacity during high-value gem showcases.",
+    image: "/images/projects/mod-jewellery.jpg",
+    clearImage: "/images/projects/mod-jewellery-clear.jpg",
+    privateImage: "/images/projects/mod-jewellery-private.jpg",
+    isVerifiedSGInstallation: true,
+    highlights: [
+      "Bespoke curved smart glass engineering",
+      "High-security VIP gem consultation booth",
+      "Concealed architectural wiring channels",
+      "Luxury jewellery showroom design",
+    ],
+  },
+  {
+    id: "jfs-logistics",
+    slug: "jfs-logistics",
+    title: "JFS Logistics Corporate Suites - Infopark",
+    clientName: "JFS Logistics",
     category: "Commercial",
-    location: "Dubai, United Arab Emirates",
+    location: "Infopark Kochi, Kerala",
     clientRequirement:
-      "High-security government operational briefings required mission-critical visual security partitions with instant on-demand confidentiality.",
+      "Global freight and logistics headquarters located in Infopark required sound-buffered, dynamic privacy partitions between executive managing director cabins and operations command floors.",
     sgSolution:
-      "Heavy-duty smart glass partitions installed with multi-circuit master lock controls and emergency instantaneous frosting protocols.",
+      "SG high-clarity switchable partitions mounted in slimline acoustic tracking profiles with wall-mounted rocker switches and wireless remote transmitters.",
     result:
-      "Absolute optical isolation during sensitive briefings with rapid return to complete architectural transparency.",
-    image: "/images/applications/offices.jpg",
+      "Streamlined open office collaboration during standard hours, coupled with instant visual confidentiality for high-stakes logistics coordination and executive conferences.",
+    image: "/images/projects/jfs-logistics.jpg",
+    clearImage: "/images/projects/jfs-logistics-clear.jpg",
+    privateImage: "/images/projects/jfs-logistics-private.jpg",
     isVerifiedSGInstallation: true,
     highlights: [
-      "Government security grade specification",
-      "Instant multi-circuit private lock",
-      "International Dubai execution",
-      "Acoustic buffering integration",
+      "Infopark Kochi tech campus installation",
+      "Acoustic perimeter tracking profiles",
+      "Executive cabin & operations separation",
+      "Rapid multi-zone remote switching",
     ],
   },
   {
-    id: "jumeirah-emirates-towers",
-    slug: "jumeirah-emirates-towers",
-    title: "Jumeirah Emirates Towers Luxury Suites",
-    clientName: "Jumeirah Group",
-    category: "Hospitality",
-    location: "Sheikh Zayed Road, Dubai",
-    clientRequirement:
-      "Five-star luxury hotel sought to maximize guest room spatial openness and city skyline light transmission while providing instant bathroom privacy.",
-    sgSolution:
-      "Custom curved and flat switchable smart glass partitions connecting master bedrooms with marble bathrooms, controlled via bedside automation panels.",
-    result:
-      "Creates an expansive suite atmosphere that transitions seamlessly to full privacy when occupied, elevating luxury guest satisfaction.",
-    image: "/images/applications/hospitality.jpg",
-    isVerifiedSGInstallation: true,
-    highlights: [
-      "Five-star luxury hospitality enclosure",
-      "Integrated with guest-room master tablet",
-      "Moisture-sealed edge perimeter treatments",
-      "Expands visual room boundaries",
-    ],
-  },
-  {
-    id: "adnoc-headquarters",
-    slug: "adnoc-headquarters",
-    title: "ADNOC Corporate Executive Chambers",
-    clientName: "Abu Dhabi National Oil Company (ADNOC)",
+    id: "sreenarayan-textiles",
+    slug: "sreenarayan-textiles",
+    title: "Sreenarayan Textiles Commercial Headquarters",
+    clientName: "Sreenarayan Textiles",
     category: "Commercial",
-    location: "Corniche, Abu Dhabi",
+    location: "Kolkata, West Bengal",
     clientRequirement:
-      "Executive level conference rooms in corporate headquarters required acoustic buffering and dynamic privacy partitions for confidential meetings.",
+      "Major textile trading establishment required a versatile switchable glass facade partition for their commercial discussion cabins to manage privacy during wholesale buyer negotiations without losing showroom daylight.",
     sgSolution:
-      "SG Ultra-Clear switchable smart glass fitted in custom acoustic profile tracks with seamless building automation system integration.",
+      "Engineered large-format SG switchable smart glass panels custom-fitted into heavy-duty commercial mullions with centralized switch panel controls.",
     result:
-      "Flawless executive privacy with high clarity views of the Arabian Gulf when open, backed by international quality standards.",
-    image: "/images/hero/hero-architectural-bg.jpg",
+      "Provides an elegant, modern corporate front that maintains daylight distribution across the floor while guaranteeing complete meeting privacy on demand.",
+    image: "/images/projects/sreenarayan-textiles.jpg",
+    clearImage: "/images/projects/sreenarayan-textiles-clear.jpg",
+    privateImage: "/images/projects/sreenarayan-textiles-private.jpg",
     isVerifiedSGInstallation: true,
     highlights: [
-      "Bespoke corporate architecture",
-      "99% UV radiation protection",
-      "Building automation system integration",
-      "Executive board meeting privacy",
-    ],
-  },
-  {
-    id: "the-address-dubai-mall",
-    slug: "the-address-dubai-mall",
-    title: "The Address Dubai Mall Presidential Suites",
-    clientName: "Emaar Hospitality Group",
-    category: "Hospitality",
-    location: "Downtown Dubai",
-    clientRequirement:
-      "High-profile luxury suites overlooking the Burj Khalifa required versatile glass partitions between living salons and private entertainment suites.",
-    sgSolution:
-      "Engineered switchable privacy glass partitions with multi-tiered dimming profiles and smart wireless remote management.",
-    result:
-      "Instant transition between grand social entertaining and intimate private sanctuary with effortless smart controls.",
-    image: "/images/applications/special-projects.jpg",
-    isVerifiedSGInstallation: true,
-    highlights: [
-      "VIP presidential hospitality suites",
-      "Curated luxury interior aesthetics",
-      "Smart scene automation presets",
-      "Engineered for acoustic comfort",
+      "Commercial headquarters Kolkata installation",
+      "Large-format switchable glass panels",
+      "Daylight preservation with instant privacy",
+      "Centralized electrical switch controls",
     ],
   },
 ];
@@ -228,9 +252,9 @@ export const projects: ProjectItem[] = [
 export const projectCategories = [
   "All",
   "Commercial",
+  "Residential",
   "Special Projects",
   "Healthcare",
-  "Hospitality",
 ] as const;
 
 export type ProjectCategory = (typeof projectCategories)[number];

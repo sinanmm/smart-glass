@@ -109,7 +109,7 @@ export function SmartGlassDemo() {
               </Badge>
             </div>
             <p className="text-sm text-slate-600 leading-relaxed">
-              The partition wall instantly switches to silky frosted glass,
+              All glass surfaces—including the partition walls and exterior windows—instantly switch to silky frosted glass,
               providing total visual confidentiality while diffusing ambient light evenly throughout the room.
             </p>
             <div className="mt-4 pt-3 border-t border-slate-100 flex items-center gap-1.5 text-xs font-semibold text-[#2a8575]">
@@ -176,7 +176,7 @@ export function SmartGlassDemo() {
             {/* Base Image: PRIVATE (Frosted glass partition) */}
             <div className="absolute inset-0 w-full h-full">
               <Image
-                src="/images/hero/hero-smart-glass-private.jpg"
+                src="/images/hero/hero-smart-glass-full-private.jpg"
                 alt="SG Smart Glass - Frosted Privacy State"
                 fill
                 className="object-cover"
