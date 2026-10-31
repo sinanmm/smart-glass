@@ -33,7 +33,7 @@ export function SectionHeading({
       } ${className}`}
     >
       {badge && (
-        <div className="mb-3.5">
+        <div data-reveal="fade-up" data-reveal-delay="0" className="mb-3.5">
           <Badge variant={badgeVariant}>{badge}</Badge>
         </div>
       )}
@@ -41,6 +41,8 @@ export function SectionHeading({
       <div className={`w-full ${!isCenter && action ? "flex flex-col md:flex-row md:items-end md:justify-between gap-4" : ""}`}>
         <div>
           <h2
+            data-reveal="fade-up"
+            data-reveal-delay="70"
             className={`text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-[#286497] leading-[1.2] ${titleClassName}`}
           >
             {title}
@@ -48,6 +50,8 @@ export function SectionHeading({
 
           {description && (
             <p
+              data-reveal="fade-up"
+              data-reveal-delay="140"
               className={`mt-3.5 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl ${
                 isCenter ? "mx-auto" : ""
               } ${descriptionClassName}`}
@@ -57,7 +61,11 @@ export function SectionHeading({
           )}
         </div>
 
-        {!isCenter && action && <div className="mt-4 md:mt-0 shrink-0">{action}</div>}
+        {!isCenter && action && (
+          <div data-reveal="fade-up" data-reveal-delay="200" className="mt-4 md:mt-0 shrink-0">
+            {action}
+          </div>
+        )}
       </div>
     </div>
   );

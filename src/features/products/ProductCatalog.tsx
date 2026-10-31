@@ -33,7 +33,7 @@ export function ProductCatalog() {
   return (
     <div>
       {/* Category Filter Tabs */}
-      <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
+      <div data-reveal="fade-up" data-reveal-delay="0" className="flex flex-wrap items-center justify-center gap-3 mb-14">
         <button
           type="button"
           onClick={() => setActiveTab("all")}
@@ -72,20 +72,21 @@ export function ProductCatalog() {
       {/* Smart Film Variants Section */}
       {displayedVariants.length > 0 && (
         <div className="mb-20">
-          <div className="flex items-center gap-2 mb-3">
+          <div data-reveal="fade-up" className="flex items-center gap-2 mb-3">
             <span className="w-2.5 h-2.5 rounded-full bg-[#66BEAE]" />
             <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
               Category 01 — Switchable Privacy Films
             </h2>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-8">
+          <h3 data-reveal="fade-up" data-reveal-delay="70" className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-8">
             PDLC Smart Film Variants
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div data-reveal-group data-reveal-stagger="100" className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {displayedVariants.map((product) => (
               <div
                 key={product.id}
+                data-reveal="card"
                 className="group flex flex-col rounded-3xl overflow-hidden light-card-highlight hover:shadow-2xl hover:translate-y-[-4px] transition-luxury"
               >
                 {/* Product Image Frame */}
@@ -177,20 +178,21 @@ export function ProductCatalog() {
       {/* Glass Profiles Section */}
       {displayedProfiles.length > 0 && (
         <div>
-          <div className="flex items-center gap-2 mb-3">
+          <div data-reveal="fade-up" className="flex items-center gap-2 mb-3">
             <span className="w-2.5 h-2.5 rounded-full bg-[#286497]" />
             <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
               Category 02 — Engineered Mounting Profiles
             </h2>
           </div>
-          <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-8">
+          <h3 data-reveal="fade-up" data-reveal-delay="70" className="text-2xl sm:text-3xl font-extrabold text-slate-900 mb-8">
             Architectural Glass Profile Framing Systems
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div data-reveal-group data-reveal-stagger="100" className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {displayedProfiles.map((profile) => (
               <div
                 key={profile.id}
+                data-reveal="card"
                 className="group flex flex-col rounded-3xl overflow-hidden light-card-highlight hover:shadow-2xl hover:translate-y-[-4px] transition-luxury"
               >
                 {/* Image Frame */}

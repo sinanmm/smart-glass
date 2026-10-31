@@ -174,7 +174,7 @@ export const glassProfiles: Product[] = [
     description:
       "Unique profile design with dry glazing mechanism, 50mm deeper inner cavity, and contoured EPDM gaskets for 8mm, 10mm & 12mm glass partitions.",
     fullDescription:
-      "Twin Pro is a premier solid aluminium architectural profile system engineered by Technical Glass Leading Technologies for high-performance glass partitions and smart glass installations. Utilizing a unique twinpro mechanism with dry glazing (no glue or silicon required), Twin Pro features a 50mm deeper inner cavity (both height and width) permitting higher glass tolerances, effortless assembly, and acoustic soundproofing via contoured EPDM gaskets.",
+      "Twin Pro is a premier solid aluminium architectural profile system engineered by Technical Glass and Glazing India Private Limited for high-performance glass partitions and smart glass installations. Utilizing a unique twinpro mechanism with dry glazing (no glue or silicon required), Twin Pro features a 50mm deeper inner cavity (both height and width) permitting higher glass tolerances, effortless assembly, and acoustic soundproofing via contoured EPDM gaskets.",
     image: "/images/products/twin-pro.jpg",
     galleryImages: [
       "/images/products/twin-pro-installation.jpg",

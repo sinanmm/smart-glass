@@ -19,13 +19,23 @@ export default function ProductsPage() {
       <section className="bg-gradient-to-b from-[#F5F9FB] to-white py-14 lg:py-20 border-b border-slate-200/80">
         <Container>
           <div className="max-w-3xl">
-            <Badge variant="blue" size="md" className="mb-4">
-              Catalogue & Engineered Solutions
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight">
+            <div data-reveal="fade-up" data-reveal-delay="0" className="mb-4 inline-block">
+              <Badge variant="blue" size="md">
+                Catalogue & Engineered Solutions
+              </Badge>
+            </div>
+            <h1
+              data-reveal="fade-up"
+              data-reveal-delay="70"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight"
+            >
               Smart Glass & Profile Systems
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p
+              data-reveal="fade-up"
+              data-reveal-delay="140"
+              className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed"
+            >
               Explore switchable smart film variants across distinct optical clarity tiers alongside
               precision-engineered architectural aluminum profile systems for smart glass installations.
             </p>

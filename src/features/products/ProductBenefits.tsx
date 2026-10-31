@@ -61,12 +61,13 @@ export function ProductBenefits() {
           className="mb-14"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div data-reveal-group data-reveal-stagger="80" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
               <div
                 key={benefit.title}
+                data-reveal="card"
                 className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/90 light-card-highlight text-card-elevated hover:border-[#286497]/40 hover:bg-white hover:shadow-xl transition-luxury"
               >
                 <div className="w-12 h-12 rounded-xl bg-[#eaf2f8] flex items-center justify-center text-[#286497] mb-5">

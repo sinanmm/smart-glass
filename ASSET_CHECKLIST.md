@@ -1,6 +1,6 @@
 # SG Smart Glass Media Asset Replacement & Verification Checklist
 
-This document details the asset structure, paths, and content verification status for the **SG Smart Glass** website (powered by **Technical Glass and Glazing India Pvt. Ltd.**).
+This document details the asset structure, paths, and content verification status for the **SG Smart Glass** website (powered by **Technical Glass and Glazing India Private Limited**).
 
 ---
 
@@ -67,7 +67,7 @@ This document details the asset structure, paths, and content verification statu
 
 ## 7. Claim Verification Status
 
-- **17+ Years of Industry Experience:** Attributed specifically to **Technical Glass and Glazing India Pvt. Ltd. / group**.
+- **17+ Years of Industry Experience:** Attributed specifically to **Technical Glass and Glazing India Private Limited / group**.
 - **Scope of Work Clarification:**
   - Base-glass selection and procurement is handled by the client or appointed glass supplier.
   - Film preparation, customisation to confirmed measurements, application coordination, and electrical connections are handled by SG Smart Glass.

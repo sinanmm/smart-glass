@@ -30,12 +30,13 @@ export function ApplicationPreview() {
         />
 
         {/* 6 Application Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div data-reveal-group data-reveal-stagger="90" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {applications.map((item, index) => {
             return (
               <Link
                 key={item.id}
                 href={`/applications#${item.slug}`}
+                data-reveal="card"
                 className="group flex flex-col rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#286497]/30 transition-luxury"
               >
                 {/* Image Container with Subtle Zoom */}

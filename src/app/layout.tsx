@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/content/siteConfig";
+import { ScrollRevealProvider } from "@/components/ui/ScrollReveal";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     "Smart Glass for Offices",
     "Smart Glass for Homes",
     "Switchable Glass",
-    "Technical Glass and Glazing",
+    "Technical Glass and Glazing India Private Limited",
   ],
   authors: [{ name: siteConfig.legalCompanyName }],
   creator: siteConfig.legalCompanyName,
@@ -125,6 +126,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col font-sans text-slate-800 bg-white antialiased">
+        <ScrollRevealProvider />
         <Navbar />
         <main className="flex-1 pt-[72px] sm:pt-[82px] lg:pt-[88px]">{children}</main>
         <Footer />

@@ -47,15 +47,15 @@ export function SmartGlassDemo() {
         />
 
         {/* State Explanation Cards - Highlighted for Light Theme */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
+        <div data-reveal-group data-reveal-stagger="120" className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10">
           {/* CLEAR State Card */}
           <div
+            data-reveal="card"
             onClick={() => setPreset("clear")}
-            className={`p-7 rounded-2xl cursor-pointer transition-all ${
-              sliderPos > 70
+            className={`p-7 rounded-2xl cursor-pointer transition-all ${sliderPos > 70
                 ? "bg-white border-2 border-[#286497] shadow-lg ring-4 ring-[#286497]/15 translate-y-[-2px]"
                 : "light-card-highlight hover:border-[#286497]/50"
-            }`}
+              }`}
           >
             <div className="flex items-center justify-between mb-3.5">
               <div className="flex items-center gap-3">
@@ -85,12 +85,12 @@ export function SmartGlassDemo() {
 
           {/* PRIVATE State Card */}
           <div
+            data-reveal="card"
             onClick={() => setPreset("private")}
-            className={`p-7 rounded-2xl cursor-pointer transition-all ${
-              sliderPos < 30
+            className={`p-7 rounded-2xl cursor-pointer transition-all ${sliderPos < 30
                 ? "bg-white border-2 border-[#66BEAE] shadow-lg ring-4 ring-[#66BEAE]/20 translate-y-[-2px]"
                 : "light-card-highlight hover:border-[#66BEAE]/60"
-            }`}
+              }`}
           >
             <div className="flex items-center justify-between mb-3.5">
               <div className="flex items-center gap-3">
@@ -120,7 +120,7 @@ export function SmartGlassDemo() {
         </div>
 
         {/* Large Interactive Comparison Stage */}
-        <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-white p-3 sm:p-5 shadow-2xl border border-slate-200">
+        <div data-reveal="card" data-reveal-delay="150" className="max-w-5xl mx-auto rounded-3xl overflow-hidden bg-white p-3 sm:p-5 shadow-2xl border border-slate-200">
           {/* Controller Bar with CLEAR / PRIVATE Toggle Buttons */}
           <div className="flex flex-wrap items-center justify-between gap-3 mb-4 px-2 py-1">
             <div className="flex items-center gap-2">
@@ -135,22 +135,20 @@ export function SmartGlassDemo() {
               <button
                 type="button"
                 onClick={() => setPreset("clear")}
-                className={`px-4 py-2 rounded-lg transition-all cursor-pointer ${
-                  sliderPos > 70
+                className={`px-4 py-2 rounded-lg transition-all cursor-pointer ${sliderPos > 70
                     ? "bg-[#286497] text-white shadow-xs font-bold"
                     : "text-slate-600 hover:text-slate-900"
-                }`}
+                  }`}
               >
                 SWITCH TO CLEAR (ON)
               </button>
               <button
                 type="button"
                 onClick={() => setPreset("private")}
-                className={`px-4 py-2 rounded-lg transition-all cursor-pointer ${
-                  sliderPos < 30
+                className={`px-4 py-2 rounded-lg transition-all cursor-pointer ${sliderPos < 30
                     ? "bg-[#2a8575] text-white shadow-xs font-bold"
                     : "text-slate-600 hover:text-slate-900"
-                }`}
+                  }`}
               >
                 SWITCH TO PRIVATE (OFF)
               </button>

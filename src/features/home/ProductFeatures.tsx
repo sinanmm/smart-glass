@@ -58,12 +58,13 @@ export function ProductFeatures() {
           className="mb-14"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-reveal-group data-reveal-stagger="90" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((item) => {
             const Icon = item.icon;
             return (
               <div
                 key={item.claim}
+                data-reveal="card"
                 className="group p-8 rounded-3xl text-card-elevated flex flex-col justify-between hover:shadow-2xl hover:translate-y-[-4px] transition-luxury"
               >
                 <div>

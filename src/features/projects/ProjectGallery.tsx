@@ -38,7 +38,7 @@ export function ProjectGallery({ initialProjects }: ProjectGalleryProps) {
   return (
     <div>
       {/* Dynamic Controls Bar: Search & Category Filter Pills */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-200/80">
+      <div data-reveal="fade-up" data-reveal-delay="0" className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-slate-200/80">
         {/* Category Pills */}
         <div className="flex flex-wrap items-center justify-center gap-2">
           {projectCategories.map((category) => {
@@ -104,11 +104,12 @@ export function ProjectGallery({ initialProjects }: ProjectGalleryProps) {
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div data-reveal-group data-reveal-stagger="90" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <Link
               key={project.id}
               href={`/projects/${project.slug}`}
+              data-reveal="card"
               className="group block rounded-3xl overflow-hidden light-card-highlight hover:shadow-2xl hover:translate-y-[-6px] transition-luxury flex flex-col justify-between cursor-pointer"
             >
               <div>

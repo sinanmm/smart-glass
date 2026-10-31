@@ -21,27 +21,41 @@ export function FinalCTA() {
 
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center flex flex-col items-center">
-          <Badge
-            variant="teal"
-            size="md"
-            className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-xs"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#66BEAE]" />
-            Consult With Smart Glass Specialists
-          </Badge>
+          <div data-reveal="fade-up" data-reveal-delay="0">
+            <Badge
+              variant="teal"
+              size="md"
+              className="mb-6 bg-white/10 text-white border-white/20 backdrop-blur-xs"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#66BEAE]" />
+              Consult With Smart Glass Specialists
+            </Badge>
+          </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+          <h2
+            data-reveal="fade-up"
+            data-reveal-delay="70"
+            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight"
+          >
             Make Your Glass Smarter.
           </h2>
 
-          <p className="mt-5 text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl">
+          <p
+            data-reveal="fade-up"
+            data-reveal-delay="140"
+            className="mt-5 text-base sm:text-lg text-blue-100/90 leading-relaxed max-w-2xl"
+          >
             Tell us about your project and our team will help you plan the right smart glass
             solution—from electrical conduit layouts to custom film
             preparation, turnkey installation (smart glass only), and final handover.
           </p>
 
           {/* Action CTAs */}
-          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto">
+          <div
+            data-reveal="fade-up"
+            data-reveal-delay="210"
+            className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4 w-full sm:w-auto"
+          >
             <Button
               href="/contact"
               variant="teal"
@@ -63,7 +77,11 @@ export function FinalCTA() {
           </div>
 
           {/* Quick contact prompt */}
-          <div className="mt-10 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-blue-200">
+          <div
+            data-reveal="fade-up"
+            data-reveal-delay="280"
+            className="mt-10 pt-8 border-t border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-blue-200"
+          >
             <a
               href={`tel:${siteConfig.contact.indiaPrimary.tel}`}
               className="flex items-center gap-2 hover:text-white transition-colors"

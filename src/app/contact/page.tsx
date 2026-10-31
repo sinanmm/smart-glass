@@ -17,7 +17,7 @@ import { siteConfig } from "@/content/siteConfig";
 export const metadata: Metadata = {
   title: "Contact SG Smart Glass | Smart Glass Consultation & Quote",
   description:
-    "Contact Technical Glass and Glazing for smart glass, switchable privacy glass and PDLC smart film enquiries across the region and the UAE.",
+    "Contact Technical Glass and Glazing India Private Limited for smart glass, switchable privacy glass and PDLC smart film enquiries across the region and the UAE.",
 };
 
 interface ContactPageProps {
@@ -39,13 +39,23 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
       <section className="bg-gradient-to-b from-[#F5F9FB] to-white py-14 lg:py-20 border-b border-slate-200/80">
         <Container>
           <div className="max-w-3xl">
-            <Badge variant="blue" size="md" className="mb-4">
-              Enquiry & Support
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight leading-tight">
+            <div data-reveal="fade-up" data-reveal-delay="0" className="mb-4 inline-block">
+              <Badge variant="blue" size="md">
+                Enquiry & Support
+              </Badge>
+            </div>
+            <h1
+              data-reveal="fade-up"
+              data-reveal-delay="70"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight leading-tight"
+            >
               Contact SG Smart Glass
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p
+              data-reveal="fade-up"
+              data-reveal-delay="140"
+              className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed"
+            >
               Connect directly with our smart glass specialists for project planning,
               PDLC film customisation, site coordination, and quotation estimates.
             </p>
@@ -59,7 +69,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left: Official Company Contact Cards */}
             <div className="lg:col-span-5 space-y-6">
-              <div>
+              <div data-reveal="fade-up" data-reveal-delay="0">
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-1">
                   Operating Entity
                 </span>
@@ -72,7 +82,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </div>
 
               {/* Head Office Address */}
-              <div className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/90 flex items-start gap-4 shadow-sm light-card-highlight text-card-elevated">
+              <div
+                data-reveal="card"
+                data-reveal-delay="70"
+                className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/90 flex items-start gap-4 shadow-sm light-card-highlight text-card-elevated"
+              >
                 <div className="w-10 h-10 rounded-xl bg-[#eaf2f8] flex items-center justify-center text-[#286497] shrink-0 mt-0.5">
                   <MapPin className="w-5 h-5" />
                 </div>
@@ -92,7 +106,11 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </div>
 
               {/* Telephones */}
-              <div className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/90 space-y-4 shadow-sm light-card-highlight text-card-elevated">
+              <div
+                data-reveal="card"
+                data-reveal-delay="140"
+                className="p-6 rounded-2xl bg-[#F5F9FB] border border-slate-200/90 space-y-4 shadow-sm light-card-highlight text-card-elevated"
+              >
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-[#eaf2f8] flex items-center justify-center text-[#286497] shrink-0 mt-0.5">
                     <Phone className="w-5 h-5" />
@@ -149,7 +167,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </div>
 
               {/* Email & WhatsApp Quick Row */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div data-reveal="fade-up" data-reveal-delay="210" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
                   className="p-5 rounded-2xl bg-[#F5F9FB] border border-slate-200 hover:border-[#286497]/40 transition-colors flex items-center gap-3.5"
@@ -188,7 +206,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
               </div>
 
               {/* Operational Notice */}
-              <div className="p-5 rounded-2xl bg-white border border-slate-200 text-xs text-slate-600 space-y-2">
+              <div data-reveal="fade-up" data-reveal-delay="260" className="p-5 rounded-2xl bg-white border border-slate-200 text-xs text-slate-600 space-y-2">
                 <div className="flex items-center gap-2 font-bold text-slate-800">
                   <ShieldCheck className="w-4 h-4 text-[#66BEAE]" />
                   Service & Site Coordination Scope
@@ -202,7 +220,7 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
             </div>
 
             {/* Right: Quotation Form */}
-            <div className="lg:col-span-7">
+            <div data-reveal="card" data-reveal-delay="100" className="lg:col-span-7">
               <QuoteForm
                 initialProduct={initialProduct}
                 initialApplication={initialApplication}

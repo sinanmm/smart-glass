@@ -37,13 +37,23 @@ export default function ApplicationsPage() {
       <section className="bg-gradient-to-b from-[#F5F9FB] to-white py-14 lg:py-20 border-b border-slate-200/80">
         <Container>
           <div className="max-w-3xl">
-            <Badge variant="teal" size="md" className="mb-4">
-              Architectural Environments
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight">
+            <div data-reveal="fade-up" data-reveal-delay="0" className="mb-4 inline-block">
+              <Badge variant="teal" size="md">
+                Architectural Environments
+              </Badge>
+            </div>
+            <h1
+              data-reveal="fade-up"
+              data-reveal-delay="70"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight"
+            >
               Smart Glass Applications
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p
+              data-reveal="fade-up"
+              data-reveal-delay="140"
+              className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed"
+            >
               Discover how switchable privacy glass transforms modern commercial,
               residential, healthcare, and hospitality spaces with instant confidentiality
               and daylight transmission.
@@ -65,7 +75,10 @@ export default function ApplicationsPage() {
                   className="scroll-mt-28 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center"
                 >
                   {/* Image Column */}
-                  <div className={`lg:col-span-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}>
+                  <div
+                    data-reveal="card"
+                    className={`lg:col-span-6 ${isEven ? "lg:order-1" : "lg:order-2"}`}
+                  >
                     <div className="relative aspect-[16/10] rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl group">
                       <Image
                         src={app.image}
@@ -83,7 +96,11 @@ export default function ApplicationsPage() {
                   </div>
 
                   {/* Content Column */}
-                  <div className={`lg:col-span-6 ${isEven ? "lg:order-2" : "lg:order-1"}`}>
+                  <div
+                    data-reveal="fade-up"
+                    data-reveal-delay="70"
+                    className={`lg:col-span-6 ${isEven ? "lg:order-2" : "lg:order-1"}`}
+                  >
                     <Badge variant="blue" size="sm" className="mb-3">
                       Application {String(index + 1).padStart(2, "0")}
                     </Badge>
@@ -147,12 +164,13 @@ export default function ApplicationsPage() {
           />
 
           {/* 6 Step Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div data-reveal-group data-reveal-stagger="90" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {projectWorkflow.map((step, idx) => {
               const Icon = workflowIcons[idx] || CheckCircle2;
               return (
                 <div
                   key={step.step}
+                  data-reveal="card"
                   className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xs hover:shadow-xl hover:border-[#286497]/40 transition-luxury flex flex-col justify-between"
                 >
                   <div>
@@ -194,7 +212,7 @@ export default function ApplicationsPage() {
           </div>
 
           {/* Existing Fixed Glass Policy */}
-          <div className="mt-16 max-w-4xl mx-auto p-8 rounded-3xl bg-white border border-[#286497]/20 shadow-md">
+          <div data-reveal="card" className="mt-16 max-w-4xl mx-auto p-8 rounded-3xl bg-white border border-[#286497]/20 shadow-md">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-xl bg-[#eaf2f8] flex items-center justify-center text-[#286497] shrink-0 mt-1">
                 <AlertCircle className="w-6 h-6" />
@@ -211,7 +229,7 @@ export default function ApplicationsPage() {
           </div>
 
           {/* Scope of Work Clarification */}
-          <div className="mt-8 max-w-4xl mx-auto p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
+          <div data-reveal="card" className="mt-8 max-w-4xl mx-auto p-8 rounded-3xl bg-white border border-slate-200 shadow-sm">
             <h3 className="text-lg font-bold text-slate-900 mb-6 text-center">
               {scopeOfWorkClarification.title}
             </h3>

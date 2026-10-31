@@ -55,20 +55,32 @@ export function ClientLogos() {
       <Container>
         {/* Section Heading */}
         <div className="flex flex-col items-center text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#eaf2f8] text-[#286497] text-xs font-bold tracking-wider uppercase mb-3">
+          <div
+            data-reveal="fade-up"
+            data-reveal-delay="0"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#eaf2f8] text-[#286497] text-xs font-bold tracking-wider uppercase mb-3"
+          >
             <Award className="w-3.5 h-3.5 text-[#286497]" />
             Trusted By Leading Brands & Institutions
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2
+            data-reveal="fade-up"
+            data-reveal-delay="70"
+            className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight"
+          >
             Distinguished Clients & Architectural Partners
           </h2>
-          <p className="text-sm text-slate-500 mt-2 max-w-2xl leading-relaxed">
+          <p
+            data-reveal="fade-up"
+            data-reveal-delay="140"
+            className="text-sm text-slate-500 mt-2 max-w-2xl leading-relaxed"
+          >
             Delivering precision switchable smart glass solutions across prestigious corporate headquarters, luxury jewellery showrooms, and government institutions.
           </p>
         </div>
 
         {/* Unified Client Logos Grid in Full Original Colors */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 items-center mb-16">
+        <div data-reveal-group data-reveal-stagger="35" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 items-center mb-16">
           {clientLogos.map((client) => {
             const logoContent = (
               <div className="relative w-full h-12 sm:h-14 max-w-[200px]">
@@ -87,6 +99,7 @@ export function ClientLogos() {
                 <Link
                   key={client.name}
                   href={`/projects/${client.slug}`}
+                  data-reveal="scale"
                   className="group flex items-center justify-center p-3 sm:p-4 h-20 sm:h-24 transition-all duration-300 cursor-pointer"
                   title={`View ${client.name} Project Case Study`}
                 >
@@ -98,6 +111,7 @@ export function ClientLogos() {
             return (
               <div
                 key={client.name}
+                data-reveal="scale"
                 className="group flex items-center justify-center p-3 sm:p-4 h-20 sm:h-24 transition-all duration-300"
               >
                 {logoContent}
@@ -109,18 +123,27 @@ export function ClientLogos() {
         {/* Client Testimonials Carousel/Cards from Brochure Page 4 */}
         <div className="pt-4">
           <div className="text-center mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#286497] block mb-1">
+            <span
+              data-reveal="fade-up"
+              data-reveal-delay="0"
+              className="text-xs font-bold uppercase tracking-wider text-[#286497] block mb-1"
+            >
               Client Experiences
             </span>
-            <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
+            <h3
+              data-reveal="fade-up"
+              data-reveal-delay="70"
+              className="text-xl sm:text-2xl font-bold text-slate-900"
+            >
               What Industry Leaders Say About SG Smart Glass
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div data-reveal-group data-reveal-stagger="120" className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t) => (
               <div
                 key={t.name}
+                data-reveal="card"
                 className="p-7 rounded-3xl text-card-elevated flex flex-col justify-between hover:shadow-xl transition-luxury group"
               >
                 <div>

@@ -45,7 +45,11 @@ export function Hero() {
         <div className="max-w-2xl flex flex-col items-start text-left">
           
           {/* Badge */}
-          <div className="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 border border-white/20 backdrop-blur-md text-[#66BEAE] text-[11px] font-bold tracking-wider uppercase shadow-md">
+          <div
+            data-reveal="fade-up"
+            data-reveal-delay="50"
+            className="mb-3 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/40 border border-white/20 backdrop-blur-md text-[#66BEAE] text-[11px] font-bold tracking-wider uppercase shadow-md"
+          >
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#66BEAE] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#66BEAE]"></span>
@@ -54,7 +58,11 @@ export function Hero() {
           </div>
 
           {/* Heading - Refined Size & Crisp Visibility Font */}
-          <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
+          <h1
+            data-reveal="fade-up"
+            data-reveal-delay="120"
+            className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight leading-[1.15] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]"
+          >
             SMART GLASS.
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#66BEAE] via-[#86e2d3] to-white drop-shadow-[0_2px_10px_rgba(102,190,174,0.35)]">
@@ -63,14 +71,22 @@ export function Hero() {
           </h1>
 
           {/* Supporting Copy - Compact Spacing & Clear Font */}
-          <p className="mt-3.5 text-sm sm:text-base text-slate-100/95 leading-relaxed font-normal max-w-xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)]">
+          <p
+            data-reveal="fade-up"
+            data-reveal-delay="190"
+            className="mt-3.5 text-sm sm:text-base text-slate-100/95 leading-relaxed font-normal max-w-xl drop-shadow-[0_1px_6px_rgba(0,0,0,0.85)]"
+          >
             Switch between crystal clarity and complete privacy at the touch of a button.{" "}
             <strong className="text-white font-semibold">SG Smart Glass</strong> integrates advanced
             switchable smart film into modern architectural spaces.
           </p>
 
           {/* Action CTA Buttons */}
-          <div className="mt-5 sm:mt-6 flex flex-wrap items-center gap-3 w-full sm:w-auto">
+          <div
+            data-reveal="fade-up"
+            data-reveal-delay="260"
+            className="mt-5 sm:mt-6 flex flex-wrap items-center gap-3 w-full sm:w-auto"
+          >
             <Link
               href="/products"
               className="inline-flex items-center justify-center gap-2 font-bold text-xs sm:text-sm tracking-wide px-6 py-3 rounded-xl bg-[#66BEAE] hover:bg-[#52ad9d] text-slate-950 shadow-lg shadow-teal-900/30 hover:shadow-teal-500/30 active:scale-[0.98] transition-all"
@@ -88,7 +104,11 @@ export function Hero() {
           </div>
 
           {/* Clean Attribution */}
-          <div className="mt-4 sm:mt-5 flex items-center gap-2.5">
+          <div
+            data-reveal="fade-up"
+            data-reveal-delay="330"
+            className="mt-4 sm:mt-5 flex items-center gap-2.5"
+          >
             <span className="w-1.5 h-4 rounded-full bg-[#66BEAE]" />
             <p className="text-xs text-slate-200/90 drop-shadow-md">
               Powered by <span className="text-white font-semibold">{siteConfig.legalCompanyName}</span>

@@ -27,6 +27,10 @@
   --cool-bg: #F5F9FB;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #FFFFFF;
   color: #2D3741;
@@ -94,12 +98,77 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* ============================================================
+   Scroll Reveal Animation & Motion System
+   Fluid, professional, GPU-accelerated scroll reveal transitions
+   ============================================================ */
+
+/* Hide unrevealed elements only once client script is initialized */
+.js-reveal [data-reveal]:not(.is-revealed) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Fade up (standard text and sections) */
+.js-reveal [data-reveal="fade-up"]:not(.is-revealed),
+.js-reveal [data-reveal]:not([data-reveal="card"]):not([data-reveal="fade-in"]):not([data-reveal="slide-left"]):not([data-reveal="slide-right"]):not([data-reveal="scale"]):not(.is-revealed) {
+  transform: translateY(22px);
+}
+
+/* Card variant (luxurious subtle lift & scale) */
+.js-reveal [data-reveal="card"]:not(.is-revealed) {
+  transform: translateY(26px) scale(0.985);
+}
+
+/* Slide from right to left */
+.js-reveal [data-reveal="slide-left"]:not(.is-revealed) {
+  transform: translateX(28px);
+}
+
+/* Slide from left to right */
+.js-reveal [data-reveal="slide-right"]:not(.is-revealed) {
+  transform: translateX(-28px);
+}
+
+/* Fade in with no translation */
+.js-reveal [data-reveal="fade-in"]:not(.is-revealed) {
+  transform: translateY(0);
+}
+
+/* Gentle scale up */
+.js-reveal [data-reveal="scale"]:not(.is-revealed) {
+  transform: scale(0.94);
+}
+
+/* Base transition physics */
+.js-reveal [data-reveal] {
+  transition-property: opacity, transform;
+  transition-duration: 0.75s;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+/* Active revealed state */
+.js-reveal [data-reveal].is-revealed {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Seamless hover support for cards after reveal */
+.js-reveal [data-reveal].is-revealed.light-card-highlight:hover,
+.js-reveal [data-reveal].is-revealed.text-card-elevated:hover {
+  transform: translateY(-4px) scale(1);
+}
+
 /* Reduced motion accessibility */
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  .js-reveal [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  html {
     scroll-behavior: auto !important;
   }
 }

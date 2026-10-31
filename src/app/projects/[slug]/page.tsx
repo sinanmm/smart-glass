@@ -84,7 +84,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
       <section className="py-12 lg:py-20 bg-white">
         <Container>
           {/* Header */}
-          <div className="max-w-4xl mb-12">
+          <div data-reveal="fade-up" className="max-w-4xl mb-12">
             <div className="flex flex-wrap items-center gap-3 mb-4">
               <Badge variant="blue" size="sm">
                 {project.category}
@@ -104,7 +104,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
           {/* Primary Installation Media */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
-            <div className="lg:col-span-8">
+            <div data-reveal="card" className="lg:col-span-8">
               <div className="relative aspect-[16/10] rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl">
                 <Image
                   src={project.image}
@@ -149,7 +149,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </div>
 
             {/* Project Quick Overview Card */}
-            <div className="lg:col-span-4 p-8 rounded-3xl bg-[#F5F9FB] border border-slate-200 shadow-xs space-y-6">
+            <div data-reveal="card" data-reveal-delay="100" className="lg:col-span-4 p-8 rounded-3xl bg-[#F5F9FB] border border-slate-200 shadow-xs space-y-6">
               <h3 className="text-base font-bold text-slate-900 border-b border-slate-200 pb-3">
                 Project Information
               </h3>
@@ -302,11 +302,12 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div data-reveal-group data-reveal-stagger="90" className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {related.map((rel) => (
               <Link
                 key={rel.id}
                 href={`/projects/${rel.slug}`}
+                data-reveal="card"
                 className="group flex flex-col sm:flex-row gap-5 p-5 rounded-2xl bg-white border border-slate-200 hover:border-[#286497]/40 hover:shadow-lg transition-luxury"
               >
                 <div className="relative aspect-[16/10] sm:w-48 shrink-0 rounded-xl overflow-hidden bg-slate-100">

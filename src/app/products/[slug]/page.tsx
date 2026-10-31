@@ -109,7 +109,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Left: Product Media */}
-            <div className="lg:col-span-7 space-y-4">
+            <div data-reveal="card" className="lg:col-span-7 space-y-4">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 border border-slate-200/90 shadow-lg">
                 <Image
                   src={product.image}
@@ -140,7 +140,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </div>
 
             {/* Right: Product Details & CTAs */}
-            <div className="lg:col-span-5 flex flex-col items-start">
+            <div data-reveal="fade-up" data-reveal-delay="70" className="lg:col-span-5 flex flex-col items-start">
               <div className="mb-2">
                 <Badge variant="blue" size="sm">
                   {product.categoryLabel}
@@ -337,11 +337,12 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div data-reveal-group data-reveal-stagger="90" className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {related.map((rel) => (
               <Link
                 key={rel.id}
                 href={`/products/${rel.slug}`}
+                data-reveal="card"
                 className="group p-5 rounded-2xl bg-[#F5F9FB] border border-slate-200 hover:border-[#286497]/40 hover:bg-white hover:shadow-lg transition-luxury"
               >
                 <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-100 mb-4">

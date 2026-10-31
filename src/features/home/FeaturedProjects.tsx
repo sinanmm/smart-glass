@@ -33,11 +33,12 @@ export function FeaturedProjects() {
         />
 
         {/* Project Cards Grid - Entire Plate Clickable */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div data-reveal-group data-reveal-stagger="90" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {featured.map((project) => (
             <Link
               key={project.id}
               href={`/projects/${project.slug}`}
+              data-reveal="card"
               className="group block rounded-3xl overflow-hidden light-card-highlight hover:shadow-2xl hover:translate-y-[-6px] transition-luxury flex flex-col justify-between cursor-pointer"
             >
               <div>

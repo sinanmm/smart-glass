@@ -18,13 +18,23 @@ export default function ProjectsPage() {
       <section className="bg-gradient-to-b from-[#F5F9FB] to-white py-14 lg:py-20 border-b border-slate-200/80">
         <Container>
           <div className="max-w-3xl">
-            <Badge variant="blue" size="md" className="mb-4">
-              Project Portfolio
-            </Badge>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight">
+            <div data-reveal="fade-up" data-reveal-delay="0" className="mb-4 inline-block">
+              <Badge variant="blue" size="md">
+                Project Portfolio
+              </Badge>
+            </div>
+            <h1
+              data-reveal="fade-up"
+              data-reveal-delay="70"
+              className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#286497] tracking-tight"
+            >
               Real Spaces. Smarter Possibilities.
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed">
+            <p
+              data-reveal="fade-up"
+              data-reveal-delay="140"
+              className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed"
+            >
               Explore authentic SG Smart Glass architectural installations, showcasing
               engineered switchable privacy film across boardrooms, luxury villas, hospitality suites,
               and healthcare environments.

@@ -30,7 +30,7 @@ export function WhyChooseUs() {
       icon: Globe2,
       title: "International Expertise & Global Standards",
       description:
-        "Delivering advanced HD Smart Glass solutions across the globe since 2010 with international quality and engineering benchmarks.",
+        "Delivering advanced Smart Glass solutions across the globe since 2010 under the HD brand with international quality and engineering benchmarks.",
     },
     {
       num: "03",
@@ -67,7 +67,7 @@ export function WhyChooseUs() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Left Column: Visual Asset and Experience Card */}
-          <div className="lg:col-span-5 relative">
+          <div data-reveal="card" data-reveal-delay="0" className="lg:col-span-5 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 aspect-[4/5] bg-slate-100">
               <Image
                 src="/images/about/facility.jpg"
@@ -93,7 +93,7 @@ export function WhyChooseUs() {
                       35+ Years in Glass & Architectural Engineering
                     </p>
                     <p className="text-[11px] text-slate-500">
-                      Delivering Smart Glass Globally Since 2010
+                      Delivering Smart Glass Globally Under the HD Brand Since 2010
                     </p>
                   </div>
                 </div>
@@ -113,12 +113,13 @@ export function WhyChooseUs() {
             />
 
             {/* List of Pillars - Highlighted text cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div data-reveal-group data-reveal-stagger="75" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {pillars.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={item.num}
+                    data-reveal="card"
                     className="p-5 rounded-2xl text-card-elevated hover:shadow-lg hover:border-[#286497]/40 transition-luxury flex flex-col justify-between"
                   >
                     <div>
@@ -143,7 +144,7 @@ export function WhyChooseUs() {
               })}
             </div>
 
-            <div className="mt-8 pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <div data-reveal="fade-up" data-reveal-delay="200" className="mt-8 pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Button
                 href="/about"
                 variant="primary"

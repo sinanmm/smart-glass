@@ -23,7 +23,7 @@ export function PDLCExplanation() {
         />
 
         {/* Interactive Diagram Stage */}
-        <div className="max-w-4xl mx-auto rounded-3xl bg-white p-6 sm:p-10 border border-slate-200 shadow-xl">
+        <div data-reveal="card" className="max-w-4xl mx-auto rounded-3xl bg-white p-6 sm:p-10 border border-slate-200 shadow-xl">
           {/* Interactive State Switcher */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-8 border-b border-slate-100">
             <div>
