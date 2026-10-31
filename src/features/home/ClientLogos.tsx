@@ -80,15 +80,15 @@ export function ClientLogos() {
         </div>
 
         {/* Unified Client Logos Grid in Full Original Colors */}
-        <div data-reveal-group data-reveal-stagger="35" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 items-center mb-16">
+        <div data-reveal-group data-reveal-stagger="30" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 items-center mb-16 overflow-hidden">
           {clientLogos.map((client) => {
             const logoContent = (
-              <div className="relative w-full h-12 sm:h-14 max-w-[200px]">
+              <div className="relative w-full h-11 sm:h-12 max-w-[170px]">
                 <Image
                   src={client.file}
                   alt={`${client.name} logo`}
                   fill
-                  className="object-contain hover:scale-105 transition-transform duration-300"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
                 />
               </div>
@@ -100,7 +100,7 @@ export function ClientLogos() {
                   key={client.name}
                   href={`/projects/${client.slug}`}
                   data-reveal="scale"
-                  className="group flex items-center justify-center p-3 sm:p-4 h-20 sm:h-24 transition-all duration-300 cursor-pointer"
+                  className="group flex items-center justify-center p-3.5 sm:p-5 h-20 sm:h-24 rounded-2xl bg-white border border-slate-200/90 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-[#286497]/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer relative"
                   title={`View ${client.name} Project Case Study`}
                 >
                   {logoContent}
@@ -112,7 +112,7 @@ export function ClientLogos() {
               <div
                 key={client.name}
                 data-reveal="scale"
-                className="group flex items-center justify-center p-3 sm:p-4 h-20 sm:h-24 transition-all duration-300"
+                className="group flex items-center justify-center p-3.5 sm:p-5 h-20 sm:h-24 rounded-2xl bg-white border border-slate-200/90 shadow-[0_2px_8px_-2px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-[#286497]/30 transition-all duration-300"
               >
                 {logoContent}
               </div>

@@ -37,21 +37,29 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between min-h-[54px] sm:min-h-[62px] lg:min-h-[66px]">
-            {/* Logo: Sized to achieve visible height of 50-58px on desktop and 42-48px on mobile */}
+            {/* Logo: Brand emblem + typography for high visibility */}
             <Link
               href="/"
-              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#286497] rounded-md shrink-0"
+              className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#286497] rounded-md shrink-0"
               aria-label="SG Smart Glass Home"
             >
-              <div className="relative w-[66px] sm:w-[74px] lg:w-[80px] h-[48px] sm:h-[54px] lg:h-[58px] transition-transform duration-200 group-hover:scale-[1.02]">
+              <div className="relative w-[52px] sm:w-[60px] lg:w-[66px] h-[46px] sm:h-[52px] lg:h-[56px] transition-transform duration-200 group-hover:scale-[1.03] shrink-0">
                 <Image
                   src={siteConfig.logo.primary}
                   alt={siteConfig.logo.alt}
                   fill
                   priority
                   className="object-contain object-left"
-                  sizes="(max-width: 640px) 66px, (max-width: 1024px) 74px, 80px"
+                  sizes="(max-width: 640px) 52px, (max-width: 1024px) 60px, 66px"
                 />
+              </div>
+              <div className="flex flex-col justify-center">
+                <span className="text-base sm:text-lg lg:text-xl font-extrabold tracking-tight text-slate-900 group-hover:text-[#286497] transition-colors leading-none">
+                  SG Smart Glass
+                </span>
+                <span className="text-[10px] sm:text-[11px] font-semibold text-slate-400 tracking-wider uppercase mt-1 hidden sm:block">
+                  Smart Privacy
+                </span>
               </div>
             </Link>
 

@@ -118,14 +118,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${manrope.variable} ${dmSans.variable} scroll-smooth`}>
+    <html lang="en" className={`${manrope.variable} ${dmSans.variable} scroll-smooth overflow-x-hidden max-w-[100vw]`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col font-sans text-slate-800 bg-white antialiased">
+      <body className="min-h-screen flex flex-col font-sans text-slate-800 bg-white antialiased overflow-x-hidden max-w-[100vw]">
         <ScrollRevealProvider />
         <Navbar />
         <main className="flex-1 pt-[72px] sm:pt-[82px] lg:pt-[88px]">{children}</main>
