@@ -156,7 +156,7 @@ export function SmartGlassDemo() {
           </div>
 
           <div
-            className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden select-none cursor-ew-resize bg-slate-200 group shadow-inner"
+            className="relative aspect-[16/9] w-full max-w-full [container-type:inline-size] rounded-2xl overflow-hidden select-none cursor-ew-resize bg-slate-200 group shadow-inner"
             onPointerDown={(e) => {
               setIsDragging(true);
               handlePointerMove(e);
@@ -191,7 +191,7 @@ export function SmartGlassDemo() {
               className="absolute inset-0 h-full overflow-hidden"
               style={{ width: `${sliderPos}%` }}
             >
-              <div className="relative w-full h-full min-w-[320px] sm:min-w-[640px] md:min-w-[900px] lg:min-w-[1060px]">
+              <div className="relative h-full w-[100cqw] max-w-none">
                 <Image
                   src="/images/hero/hero-smart-glass-clear.jpg"
                   alt="SG Smart Glass - Transparent Clear State"
