@@ -121,6 +121,11 @@ export default function RootLayout({
     <html lang="en" className={`${manrope.variable} ${dmSans.variable} scroll-smooth overflow-x-hidden max-w-[100vw]`}>
       <head>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `if (typeof window !== 'undefined') { if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; } if (window.scrollX > 0) { window.scrollTo(0, window.scrollY || 0); } }`,
+          }}
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />

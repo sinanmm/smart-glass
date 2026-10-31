@@ -53,8 +53,8 @@ export function SmartGlassDemo() {
             data-reveal="card"
             onClick={() => setPreset("clear")}
             className={`p-7 rounded-2xl cursor-pointer transition-all ${sliderPos > 70
-                ? "bg-white border-2 border-[#286497] shadow-lg ring-4 ring-[#286497]/15 translate-y-[-2px]"
-                : "light-card-highlight hover:border-[#286497]/50"
+              ? "bg-white border-2 border-[#286497] shadow-lg ring-4 ring-[#286497]/15 translate-y-[-2px]"
+              : "light-card-highlight hover:border-[#286497]/50"
               }`}
           >
             <div className="flex items-center justify-between mb-3.5">
@@ -88,8 +88,8 @@ export function SmartGlassDemo() {
             data-reveal="card"
             onClick={() => setPreset("private")}
             className={`p-7 rounded-2xl cursor-pointer transition-all ${sliderPos < 30
-                ? "bg-white border-2 border-[#66BEAE] shadow-lg ring-4 ring-[#66BEAE]/20 translate-y-[-2px]"
-                : "light-card-highlight hover:border-[#66BEAE]/60"
+              ? "bg-white border-2 border-[#66BEAE] shadow-lg ring-4 ring-[#66BEAE]/20 translate-y-[-2px]"
+              : "light-card-highlight hover:border-[#66BEAE]/60"
               }`}
           >
             <div className="flex items-center justify-between mb-3.5">
@@ -136,8 +136,8 @@ export function SmartGlassDemo() {
                 type="button"
                 onClick={() => setPreset("clear")}
                 className={`px-4 py-2 rounded-lg transition-all cursor-pointer ${sliderPos > 70
-                    ? "bg-[#286497] text-white shadow-xs font-bold"
-                    : "text-slate-600 hover:text-slate-900"
+                  ? "bg-[#286497] text-white shadow-xs font-bold"
+                  : "text-slate-600 hover:text-slate-900"
                   }`}
               >
                 SWITCH TO CLEAR (ON)
@@ -146,8 +146,8 @@ export function SmartGlassDemo() {
                 type="button"
                 onClick={() => setPreset("private")}
                 className={`px-4 py-2 rounded-lg transition-all cursor-pointer ${sliderPos < 30
-                    ? "bg-[#2a8575] text-white shadow-xs font-bold"
-                    : "text-slate-600 hover:text-slate-900"
+                  ? "bg-[#2a8575] text-white shadow-xs font-bold"
+                  : "text-slate-600 hover:text-slate-900"
                   }`}
               >
                 SWITCH TO PRIVATE (OFF)

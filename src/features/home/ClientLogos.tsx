@@ -5,13 +5,13 @@ import { Award, Quote } from "lucide-react";
 
 export function ClientLogos() {
   const clientLogos = [
-    { name: "Malabar Gold & Diamonds", file: "/images/clients/malabar-gold.png", slug: "malabar-gold-diamonds" },
-    { name: "Meralda Jewels", file: "/images/clients/meralda-jewels.png", slug: "meralda-jewels" },
-    { name: "NURA Health", file: "/images/clients/nura.png", slug: "nura-health" },
-    { name: "Unimoni", file: "/images/clients/unimoni.png", slug: "unimoni-wizzconnect" },
+    { name: "Malabar Gold & Diamonds", file: "/images/clients/malabar-gold-v2.png", slug: "malabar-gold-diamonds" },
+    { name: "Meralda Jewels", file: "/images/clients/meralda-jewels-v2.png", slug: "meralda-jewels" },
+    { name: "NURA Health", file: "/images/clients/nura-v2.png", slug: "nura-health" },
+    { name: "Unimoni", file: "/images/clients/unimoni-v2.png", slug: "unimoni-wizzconnect" },
     { name: "M.O.D Signature Jewellery", file: "/images/clients/mod-jewellery.png", slug: "mod-jewellery" },
     { name: "JFS Logistics", file: "/images/clients/jfs-logistics.png", slug: "jfs-logistics" },
-    { name: "Dubai Police", file: "/images/clients/dubai-police.png" },
+    { name: "Dubai Police", file: "/images/clients/dubai-police-v2.png" },
     { name: "UAE Ministry of Education", file: "/images/clients/uae-moe.png" },
     { name: "ADNOC", file: "/images/clients/adnoc.png" },
     { name: "Etisalat by e&", file: "/images/clients/etisalat.png" },
@@ -80,7 +80,7 @@ export function ClientLogos() {
         </div>
 
         {/* Unified Client Logos Grid in Full Original Colors */}
-        <div data-reveal-group data-reveal-stagger="30" className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 items-center mb-16 overflow-hidden">
+        <div data-reveal-group data-reveal-stagger="30" className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 items-center mb-16 w-full max-w-full">
           {clientLogos.map((client) => {
             const logoContent = (
               <div className="relative w-full h-11 sm:h-12 max-w-[170px]">
